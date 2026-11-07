@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.3 - safe default (bridge)
+
+- Memory reads are now **off by default**: some games still crashed during multi-day sims while the bridge read
+  event payloads from memory. They run only while an empty file `enable_memory` exists in the data folder
+  (`disable_memory` still wins). Without it the bridge uses DB-table reads and documented getters only (squad,
+  contracts, player attributes/ratings, season stats, injuries, events); league table, fixtures/results,
+  transfers, offers/negotiations, world.json fixtures/tables and payload bytes need the opt-in or the save reader.
+- The event payload logger is a memory read too and follows the same opt-in and settle gate (no ungated reads).
+- No game call at all during a match flow, a multi-day sim or the 10 s after a day / match / sim / season event:
+  those events only set flags; the `DAY_PASSED` and post-match work runs on the next quiet hub event.
+- `status.json`: `memory_reads` is false and `reason` explains the opt-in while it is off; `compat` still reports
+  whether the Live Editor version is supported.
+- New tests in `tests/test_bridge_memory_guard.py`.
+
 ## 1.0.2 - bridge follow-up
 
 - Event payload reads: Live Editor sometimes hands the payload address as a float; such addresses are now skipped

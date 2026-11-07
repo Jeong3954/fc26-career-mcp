@@ -1,4 +1,4 @@
-"""Bridge crash guard (1.0.1, 1.0.2): every memory read goes through MEM, and MEM rejects bad addresses before LE's
+"""Bridge crash guard (1.0.1, 1.0.2, 1.0.3): every memory read goes through MEM, and MEM rejects bad addresses before LE's
 native read. The behaviour part runs the MEM block in a real Lua (lupa) when it is installed."""
 import os
 import re
@@ -35,6 +35,18 @@ class StaticGuardTest(unittest.TestCase):
         self.assertNotIn('cache.mode == "manager" and FC26CD.world_day', s)
         boot = s[s.index("bootstrap = function(reason)"):s.index("local function install_handler()")]
         self.assertIn("safe(function() write_world(reason) end) -- both modes", boot)
+
+    def test_memory_opt_in_and_quiet_gate(self):
+        # 1.0.3: memory reads are off unless enable_memory exists; no game call in sims / match flow / settle time
+        s = src()
+        self.assertIn('io.open(ROOT .. "\\\\enable_memory", "r")', s)
+        self.assertIn("OFFS ~= nil and not FC26CD.mem_disabled and mem_opt_in()", s)
+        self.assertIn('if not mem_opt_in() then return "off_by_default" end', s)
+        self.assertIn('MEM.why ~= "off_by_default"', s)
+        self.assertNotIn('mem_read, "ReadBytes", a, n, n, true', s)
+        h = s[s.index("function FC26CD_OnEvent"):]
+        self.assertLess(h.index("or quiet_gate() then return end"), h.index("local okcm, incm = pcall(IsInCM)\n        if not okcm"))
+        self.assertNotIn('elseif ename == "DAY_PASSED" then', h)
 
     def test_autorun_in_sync(self):
         a, m = src(AUTORUN), src()
@@ -113,6 +125,13 @@ class MemBlockTest(unittest.TestCase):
             self.assertEqual(self.run_lua("return payload_bytes_t(%s, 4)" % addr), "true|nil")
             self.assertEqual(self.lua.eval("#calls"), 0)
             self.assertIsNone(self.lua.eval("MEMT.failed"))
+
+    def test_payload_closed_gate_never_reads(self):
+        # 1.0.3: the payload logger follows the gate (opt-in, sims, settle time) like every other memory read
+        self.lua.execute("calls = {}; MEMT.open = false; MEMT.why = 'off_by_default'")
+        self.assertEqual(self.run_lua("return payload_bytes_t(0x20000000, 4)"), "true|nil")
+        self.assertEqual(self.lua.eval("#calls"), 0)
+        self.lua.execute("MEMT.open = true; MEMT.why = nil")
 
     def test_payload_read_error_keeps_mem_failed(self):
         self.lua.execute("calls = {}; MEMT.failed = nil; bytes_fail = true")

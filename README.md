@@ -115,7 +115,8 @@ Data folder: `%USERPROFILE%\Documents\FC26CareerMCP\` (`status.json`, `heartbeat
 No network: the server speaks stdio to your client or listens on 127.0.0.1 only. Read-only
 (no write handlers, no Lua from the assistant, no table dumps). Offline career only; no
 anti-cheat bypass of any kind. Every game call under `pcall`; bounded reads (one heavy read per
-game day, none during matches); canary checks disable memory reads on anything suspicious.
+game day, none during matches or multi-day sims); memory reads are **off by default** since 1.0.3 (opt in with an
+empty `enable_memory` file in the data folder) and canary checks disable them on anything suspicious.
 Full text: [docs/SAFETY.md](docs/SAFETY.md).
 
 ## Compatibility

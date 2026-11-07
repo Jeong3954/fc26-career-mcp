@@ -5,11 +5,13 @@ Documented Live Editor API calls (squad, player attributes, season stats, names,
 work on any Live Editor version that loads. The *memory reads* (standings, fixtures,
 league table, transfers, offers, world fixtures and tables) depend on offsets that are
 pinned per Live Editor version in the bridge's `SUPPORTED` table, so they run only on
-verified versions.
+verified versions, and (since 1.0.3) only when you opt in: create an empty file
+`enable_memory` in the data folder (`Documents\FC26CareerMCP` by default). Without it every
+version runs like the `partial` column below (no game crash risk from memory reads).
 
 | Live Editor | FC 26 title update | Game exe version | Status | Notes |
 |---|---|---|---|---|
-| v26.3.5 | TU 1.6.3 | 1.0.139.20381 | **full** | verified; all 8 tools, memory reads on |
+| v26.3.5 | TU 1.6.3 | 1.0.139.20381 | **full** | verified; all 8 tools, memory reads after opt-in (`enable_memory`) |
 | other versions | any | any | **partial** | documented-API data only; memory reads off for the session |
 
 `fc26_status` and `status.json` report the effective `compat`, `memory_reads` and the
