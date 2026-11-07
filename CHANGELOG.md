@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.2 - bridge follow-up
+
+- Event payload reads: Live Editor sometimes hands the payload address as a float; such addresses are now skipped
+  before the native read, and a payload read miss no longer marks the tick's memory reads as failed (it used to
+  stop the deferred memory refresh that runs later in the same tick).
+- `world.json` (standings for all competitions, leaders, all-club matches, market) is written in player career
+  too, with the same deferral / settle rules as manager career.
+- New tests for both in `tests/test_bridge_memory_guard.py`.
+
 ## 1.0.1 - crash fix (bridge)
 
 - Fixed a game crash: a snapshot memory read (league standings / fixtures) could run in the same tick as

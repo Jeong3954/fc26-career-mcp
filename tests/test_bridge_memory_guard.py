@@ -1,4 +1,4 @@
-"""Bridge crash guard (1.0.1): every memory read goes through MEM, and MEM rejects bad addresses before LE's
+"""Bridge crash guard (1.0.1, 1.0.2): every memory read goes through MEM, and MEM rejects bad addresses before LE's
 native read. The behaviour part runs the MEM block in a real Lua (lupa) when it is installed."""
 import os
 import re
@@ -28,6 +28,14 @@ class StaticGuardTest(unittest.TestCase):
         # DAY_PASSED no longer writes world.json (memory) in its own tick
         self.assertNotIn('write_world("day_passed")', s)
 
+    def test_world_json_in_both_modes(self):
+        s = src()
+        # 1.0.2: world.json (global data) is due after a game day in player career too, not only manager
+        self.assertIn("if FC26CD.world_day ~= today_int() then -- both modes", s)
+        self.assertNotIn('cache.mode == "manager" and FC26CD.world_day', s)
+        boot = s[s.index("bootstrap = function(reason)"):s.index("local function install_handler()")]
+        self.assertIn("safe(function() write_world(reason) end) -- both modes", boot)
+
     def test_autorun_in_sync(self):
         a, m = src(AUTORUN), src()
         self.assertEqual(a.replace(
@@ -54,8 +62,10 @@ class MemBlockTest(unittest.TestCase):
             function MEMORY:ReadPointer(a) calls[#calls + 1] = a; return ptr_value end
             function MEMORY:ReadShort(a) calls[#calls + 1] = a; return 7 end
             function MEMORY:ReadInt(a) calls[#calls + 1] = a; return int_value end
+            function MEMORY:ReadBytes(a, n) calls[#calls + 1] = a; if bytes_fail then error("bad read") end
+                return {1, 2, 3, 4} end
         """)
-        self.lua.execute(block + "\nMEMT = MEM; valid_ptr_t = valid_ptr")
+        self.lua.execute(block + "\nMEMT = MEM; valid_ptr_t = valid_ptr; payload_bytes_t = payload_bytes")
         self.lua.execute("MEMT.open = true; MEMT.failed = nil; ptr_value = 0x20000000; int_value = 5")
 
     def run_lua(self, code):
@@ -95,6 +105,21 @@ class MemBlockTest(unittest.TestCase):
     def test_multilevel_walk_stops_on_bad_level(self):
         self.lua.execute("ptr_value = -1")
         self.assertEqual(self.run_lua("return MEMT:ReadMultilevelPointer(0x20000000, {0x18, 0x10})"), "true|0")
+
+    def test_payload_float_address_skipped_without_failing(self):
+        # 1.0.2: LE hands some event payload addresses as floats; skip them and keep the tick's memory refresh
+        for addr in ("536870912.0", "2.0^63", '"0x20000000"', "-1"):
+            self.lua.execute("calls = {}; MEMT.failed = nil")
+            self.assertEqual(self.run_lua("return payload_bytes_t(%s, 4)" % addr), "true|nil")
+            self.assertEqual(self.lua.eval("#calls"), 0)
+            self.assertIsNone(self.lua.eval("MEMT.failed"))
+
+    def test_payload_read_error_keeps_mem_failed(self):
+        self.lua.execute("calls = {}; MEMT.failed = nil; bytes_fail = true")
+        self.assertEqual(self.run_lua("return payload_bytes_t(0x20000000, 4)"), "true|nil")
+        self.assertIsNone(self.lua.eval("MEMT.failed"))
+        self.lua.execute("bytes_fail = false")
+        self.assertEqual(self.run_lua("return #payload_bytes_t(0x20000000, 4)"), "true|4")
 
 
 if __name__ == "__main__":
