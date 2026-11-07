@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.1 - crash fix (bridge)
+
+- Fixed a game crash: a snapshot memory read (league standings / fixtures) could run in the same tick as
+  `DAY_PASSED`, while the game was rebuilding its lists; Live Editor's `ReadShort` then got a non-integer address
+  and the next native read hit `0xFFFFFFFFFFFFFFFF`.
+- Every memory read now goes through a guard: integer address inside user space checked before the native call,
+  each read in `pcall`, the first failure stops memory reads for the rest of that tick, non-pointer results read
+  as 0, multilevel pointer walks check every level.
+- Memory reads (standings, fixtures, transfer negotiations, world.json) never run in the tick of a day / match /
+  sim / season event: they wait until 10 s after the last such event and are skipped during multi-day sims; they
+  run on the next harmless career event (`snapshot.reason = "memory_refresh"`). `snapshot.memory` reports
+  `fresh` / `deferred` / `failed` and when the cached values were read. DB-table reads are unchanged.
+- Kill switch: create an empty file `disable_memory` in the data folder to turn every memory read off.
+- New tests: `tests/test_bridge_memory_guard.py`.
+
 ## 1.0.0 - initial release
 
 - Read-only Live Editor bridge (`bridge/`): status, heartbeat, snapshot (schema 4),
