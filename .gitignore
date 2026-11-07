@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+python/
+*.bak-*
+installer/install_state.json
+tests/tmp/
+*.tmp

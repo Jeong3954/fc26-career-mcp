@@ -1,0 +1,506 @@
+{
+ "schema": 2,
+ "source": "save",
+ "save_file": "CmMgrC20260101000000000",
+ "as_of_save": "2026-11-04T22:13:38",
+ "save_mtime": 1767225600.0,
+ "written": "2026-11-04T22:14:42",
+ "team_id": 7,
+ "squad_ids": [
+  70448,
+  71998,
+  74413,
+  76507,
+  202695,
+  204935,
+  206517,
+  207599,
+  225650,
+  225782,
+  232284,
+  237386,
+  240060,
+  243657,
+  244380,
+  247649,
+  251421,
+  253510,
+  256402,
+  259714,
+  261188,
+  270373,
+  276295,
+  278555,
+  279497,
+  299905,
+  460033
+ ],
+ "loaned_out_ids": [
+  70448,
+  270373
+ ],
+ "excluded_contract_rows": [
+  253054
+ ],
+ "squad_rule": "teamplayerlinks.teamid = club + playerloans.teamidloanedfrom = club; sold players excluded",
+ "game_date_note": "the save has no reliable game date; any save-based date is an estimate (~3 days off in Test Round 1): use the live bridge game_date",
+ "suspensions": [],
+ "grudgelove": [
+  {
+   "level_of_emotion": 1,
+   "playerid": 204935,
+   "emotional_teamid": 13
+  },
+  {
+   "level_of_emotion": 6,
+   "playerid": 204935,
+   "emotional_teamid": 106
+  },
+  {
+   "level_of_emotion": 7,
+   "playerid": 206517,
+   "emotional_teamid": 2
+  },
+  {
+   "level_of_emotion": 1,
+   "playerid": 206517,
+   "emotional_teamid": 8
+  },
+  {
+   "level_of_emotion": 1,
+   "playerid": 206517,
+   "emotional_teamid": 11
+  },
+  {
+   "level_of_emotion": 1,
+   "playerid": 206517,
+   "emotional_teamid": 88
+  },
+  {
+   "level_of_emotion": 1,
+   "playerid": 206517,
+   "emotional_teamid": 1355
+  },
+  {
+   "level_of_emotion": 7,
+   "playerid": 243657,
+   "emotional_teamid": 11
+  }
+ ],
+ "previous_teams": [
+  {
+   "previousteamid": 106,
+   "playerid": 204935
+  },
+  {
+   "previousteamid": 2,
+   "playerid": 206517
+  },
+  {
+   "previousteamid": 112264,
+   "playerid": 460033
+  },
+  {
+   "previousteamid": 1943,
+   "playerid": 240060
+  }
+ ],
+ "season_start": [
+  {
+   "playerid": 204935,
+   "overall": 85
+  },
+  {
+   "playerid": 259714,
+   "overall": 74
+  },
+  {
+   "playerid": 253510,
+   "overall": 76
+  },
+  {
+   "playerid": 202695,
+   "overall": 80
+  },
+  {
+   "playerid": 244380,
+   "overall": 77
+  },
+  {
+   "playerid": 243657,
+   "overall": 82
+  },
+  {
+   "playerid": 74413,
+   "overall": 73
+  },
+  {
+   "playerid": 261188,
+   "overall": 82
+  },
+  {
+   "playerid": 71998,
+   "overall": 72
+  },
+  {
+   "playerid": 237386,
+   "overall": 81
+  },
+  {
+   "playerid": 276295,
+   "overall": 76
+  },
+  {
+   "playerid": 225782,
+   "overall": 77
+  },
+  {
+   "playerid": 225650,
+   "overall": 64
+  },
+  {
+   "playerid": 240060,
+   "overall": 70
+  },
+  {
+   "playerid": 279497,
+   "overall": 74
+  },
+  {
+   "playerid": 251421,
+   "overall": 78
+  },
+  {
+   "playerid": 232284,
+   "overall": 72
+  },
+  {
+   "playerid": 207599,
+   "overall": 76
+  },
+  {
+   "playerid": 299905,
+   "overall": 67
+  },
+  {
+   "playerid": 256402,
+   "overall": 75
+  },
+  {
+   "playerid": 247649,
+   "overall": 79
+  },
+  {
+   "playerid": 206517,
+   "overall": 82
+  },
+  {
+   "playerid": 76507,
+   "overall": 60
+  },
+  {
+   "playerid": 278555,
+   "overall": 58
+  },
+  {
+   "playerid": 70448,
+   "overall": 67
+  },
+  {
+   "playerid": 270373,
+   "overall": 60
+  },
+  {
+   "playerid": 460033,
+   "overall": 68
+  }
+ ],
+ "squad_ranking": [
+  {
+   "curroverall": 905,
+   "playerid": 204935,
+   "lastoverall": 905
+  },
+  {
+   "curroverall": 935,
+   "playerid": 243657,
+   "lastoverall": 940
+  },
+  {
+   "curroverall": 835,
+   "playerid": 202695,
+   "lastoverall": 835
+  },
+  {
+   "curroverall": 810,
+   "playerid": 253510,
+   "lastoverall": 815
+  },
+  {
+   "curroverall": 820,
+   "playerid": 244380,
+   "lastoverall": 835
+  },
+  {
+   "curroverall": 810,
+   "playerid": 259714,
+   "lastoverall": 820
+  },
+  {
+   "curroverall": 785,
+   "playerid": 74413,
+   "lastoverall": 795
+  },
+  {
+   "curroverall": 900,
+   "playerid": 261188,
+   "lastoverall": 900
+  },
+  {
+   "curroverall": 780,
+   "playerid": 71998,
+   "lastoverall": 775
+  },
+  {
+   "curroverall": 915,
+   "playerid": 237386,
+   "lastoverall": 910
+  },
+  {
+   "curroverall": 850,
+   "playerid": 276295,
+   "lastoverall": 840
+  },
+  {
+   "curroverall": 780,
+   "playerid": 225782,
+   "lastoverall": 785
+  },
+  {
+   "curroverall": 640,
+   "playerid": 225650,
+   "lastoverall": 640
+  },
+  {
+   "curroverall": 700,
+   "playerid": 240060,
+   "lastoverall": 700
+  },
+  {
+   "curroverall": 760,
+   "playerid": 279497,
+   "lastoverall": 740
+  },
+  {
+   "curroverall": 785,
+   "playerid": 251421,
+   "lastoverall": 785
+  },
+  {
+   "curroverall": 720,
+   "playerid": 232284,
+   "lastoverall": 720
+  },
+  {
+   "curroverall": 760,
+   "playerid": 207599,
+   "lastoverall": 765
+  },
+  {
+   "curroverall": 755,
+   "playerid": 299905,
+   "lastoverall": 710
+  },
+  {
+   "curroverall": 770,
+   "playerid": 256402,
+   "lastoverall": 780
+  },
+  {
+   "curroverall": 825,
+   "playerid": 247649,
+   "lastoverall": 835
+  },
+  {
+   "curroverall": 850,
+   "playerid": 206517,
+   "lastoverall": 850
+  },
+  {
+   "curroverall": 600,
+   "playerid": 76507,
+   "lastoverall": 600
+  },
+  {
+   "curroverall": 580,
+   "playerid": 278555,
+   "lastoverall": 580
+  },
+  {
+   "curroverall": 750,
+   "playerid": 460033,
+   "lastoverall": 750
+  }
+ ],
+ "youth_graduates": [
+  460033
+ ],
+ "team_roles": {
+  "longkicktakerid": 204935,
+  "rightcornerkicktakerid": 243657,
+  "leftcornerkicktakerid": 243657,
+  "captainid": 204935,
+  "penaltytakerid": 237386,
+  "freekicktakerid": 243657
+ },
+ "presigned": [
+  {
+   "iscomingthisseason": 1,
+   "offerteamid": 10029,
+   "future_fee": -1,
+   "performancebonuscount": -1,
+   "wage_split": -1,
+   "offeredfee": 9000000,
+   "offeredwage": 47000,
+   "performancebonusvalue": -1,
+   "performancebonustype": 0,
+   "completedate": 20270101,
+   "isloanbuy": 0,
+   "signonbonus": -1,
+   "teamid": 7,
+   "offeredcontracttype": 5,
+   "isexchangedplayer": 0,
+   "releaseclause": -1,
+   "isdirectapproach": 0,
+   "signeddate": 20260909,
+   "playerid": 225782,
+   "squadrole": 2,
+   "secondaryplayerid": -1,
+   "isreleaseclausepaid": 0
+  }
+ ],
+ "loans": [
+  {
+   "isloantobuy": 0,
+   "teamidloanedfrom": 7,
+   "playerid": 70448,
+   "loandateend": 162427
+  },
+  {
+   "isloantobuy": 0,
+   "teamidloanedfrom": 7,
+   "playerid": 270373,
+   "loandateend": 162427
+  }
+ ],
+ "manager_info": {
+  "biglossoppscore": 0,
+  "bigwinoppscore": 1,
+  "biglossuserscore": 0,
+  "bigwinuserscore": 6,
+  "seasonobjective3": 0,
+  "bigwindate": 20260822,
+  "bigwinoppteamid": 8,
+  "biglossdate": 20260916,
+  "seasonobjectiveresult1": 0,
+  "seasonobjectiveresult2": 0,
+  "totalearnings": 1079000,
+  "clubteamid": 7,
+  "biglossuserteamid": 7,
+  "wage": 83000,
+  "bigwinuserteamid": 7,
+  "losingstreak": 0,
+  "seasonobjectiveresult3": 0,
+  "playersreleasedthisseason": 0,
+  "biglossoppteamid": 1943,
+  "seasonobjective1": 0,
+  "internationalteamid": -1,
+  "managerreputation": 0,
+  "seasonobjective2": 0,
+  "boardconfidence": 0,
+  "userid": 0
+ },
+ "manager_history": [
+  {
+   "draws": 1,
+   "losses": 1,
+   "wins": 9,
+   "games_played": 11,
+   "bigbuyplayername": "Aarons",
+   "bigsellplayername": "Hackney",
+   "leagueobjectiveresult": 0,
+   "continentalcuptrophies": 0,
+   "jobsecurityscore": 100,
+   "season": 1,
+   "bigsellamount": 20200000,
+   "leaguetrophies": 0,
+   "domestic_cup_result": -1,
+   "domesticcuptrophies": 0,
+   "leagueid": 13,
+   "bigbuyamount": 2350000,
+   "leagueobjective": 3,
+   "domestic_cup_objective": 4,
+   "europe_cup_objective": -1,
+   "artificialkey": 0,
+   "teamid": 7,
+   "goals_for": 24,
+   "points": 29,
+   "tableposition": 0,
+   "forfeits": 0,
+   "goals_against": 5,
+   "europe_cup_result": -1
+  }
+ ],
+ "news_events": [],
+ "team_names": {
+  "2": "Aston Villa",
+  "7": "Everton",
+  "8": "Leeds United",
+  "11": "Man Utd",
+  "13": "Newcastle Utd",
+  "88": "Birmingham City",
+  "106": "Sunderland",
+  "1355": "إيرلندا",
+  "1943": "AFC Bournemouth",
+  "10029": "TSG Hoffenheim",
+  "112264": "*TeamName_Abbr15_112264"
+ },
+ "player_names": {
+  "70448": "",
+  "225782": "",
+  "270373": ""
+ },
+ "product": "fc26-career-mcp",
+ "career_type": "manager",
+ "user": {
+  "userid": 0,
+  "clubteamid": 7,
+  "firstname": "Test",
+  "surname": "Manager"
+ },
+ "player": null,
+ "player_history": [],
+ "user_player": null,
+ "national_teams": [
+  {
+   "teamid": 1318,
+   "team": "England",
+   "gender": "men",
+   "leagueid": 78,
+   "roster": [
+    204935,
+    243657,
+    202695
+   ]
+  }
+ ],
+ "managers": [
+  {
+   "managerid": 1,
+   "name": "Test Manager",
+   "teamid": 7,
+   "nationality": 42,
+   "birthdate": 150000
+  }
+ ]
+}

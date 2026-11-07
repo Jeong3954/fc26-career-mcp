@@ -1,0 +1,3441 @@
+{
+ "game_date": "2027-01-06",
+ "user_team": {
+  "id": 7,
+  "name": "Everton"
+ },
+ "written": "2026-11-05T02:17:28Z",
+ "user": {
+  "firstname": "Test",
+  "usertype": 0,
+  "playertype": -1,
+  "club_teamid": 7,
+  "name": "Manager",
+  "seasons": 1
+ },
+ "squad": {
+  "injuries_read": true,
+  "flags_read": true,
+  "total_wages": 782560,
+  "match_ratings_read": true,
+  "excluded": [],
+  "notes": {
+   "stats": "app/goals/assists = all competitions incl. friendlies; split in by_competition",
+   "potential": "raw potential (hidden true value); the game shows youth POT only as a scouted range",
+   "ratings": "ratings[].rating are rounded integers; the game shows one decimal (by_competition[].avg)"
+  },
+  "players": [
+   {
+    "role": -1,
+    "age": 32,
+    "last_match": {
+     "pos": "GK",
+     "mins": 90,
+     "ovr": 85
+    },
+    "overall": 85,
+    "yellow": 0,
+    "name": "Jordan Pickford",
+    "playerid": 204935,
+    "red": 0,
+    "position": "GK",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 6
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 3,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 3,
+      "assists": 0,
+      "avg": 217
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 0,
+      "avg": 1360
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 74
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 97000,
+    "app": 24,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 85,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 25,
+    "last_match": {
+     "pos": "RDM",
+     "mins": 90,
+     "ovr": 84
+    },
+    "overall": 84,
+    "yellow": 5,
+    "name": "James Garner",
+    "playerid": 243657,
+    "red": 0,
+    "position": "CDM",
+    "assists": 3,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 3,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 3,
+      "assists": 1,
+      "avg": 230
+     },
+     {
+      "compobjid": 821,
+      "goals": 5,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 2,
+      "avg": 1514
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 159
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 68000,
+    "app": 25,
+    "contract_status": 0,
+    "goals": 5,
+    "potential": 84,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 26,
+    "last_match": {
+     "pos": "RM",
+     "mins": 90,
+     "ovr": 83
+    },
+    "overall": 83,
+    "yellow": 1,
+    "name": "Iliman Ndiaye",
+    "playerid": 261188,
+    "red": 0,
+    "position": "RM",
+    "assists": 3,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 6
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 3,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 1,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 186
+     },
+     {
+      "compobjid": 821,
+      "goals": 5,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 3,
+      "avg": 1496
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 77
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 73000,
+    "app": 23,
+    "contract_status": 0,
+    "goals": 6,
+    "potential": 83,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 31,
+    "overall": 82,
+    "yellow": 0,
+    "name": "Jack Grealish",
+    "playerid": 206517,
+    "red": 0,
+    "position": "LM",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20260825,
+      "mins": 90,
+      "rating": 7
+     },
+     {
+      "date": 20260815,
+      "mins": 78,
+      "rating": 6
+     },
+     {
+      "date": 20260728,
+      "mins": 90,
+      "rating": 8
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 3,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 1,
+      "competition": "European International Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 84
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 1,
+      "assists": 0,
+      "avg": 63
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 69
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 73000,
+    "app": 3,
+    "contract_status": 0,
+    "goals": 1,
+    "potential": 82,
+    "contract_until": "2027-06"
+   },
+   {
+    "role": -1,
+    "age": 28,
+    "last_match": {
+     "pos": "CAM",
+     "mins": 90,
+     "ovr": 81
+    },
+    "overall": 81,
+    "yellow": 2,
+    "name": "Kiernan Dewsbury-Hall",
+    "playerid": 237386,
+    "red": 0,
+    "position": "CAM",
+    "assists": 6,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 8
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 1,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 1,
+      "avg": 159
+     },
+     {
+      "compobjid": 821,
+      "goals": 9,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 5,
+      "avg": 1514
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 157
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 64000,
+    "app": 24,
+    "contract_status": 0,
+    "goals": 10,
+    "potential": 81,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 34,
+    "last_match": {
+     "pos": "LCB",
+     "mins": 62,
+     "ovr": 80
+    },
+    "overall": 80,
+    "yellow": 2,
+    "name": "James Tarkowski",
+    "playerid": 202695,
+    "red": 0,
+    "position": "CB",
+    "assists": 2,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 62,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 60,
+      "rating": 7
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 146
+     },
+     {
+      "compobjid": 821,
+      "goals": 1,
+      "competition": "Premier League",
+      "app": 18,
+      "assists": 2,
+      "avg": 1271
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 52000,
+    "app": 20,
+    "contract_status": 0,
+    "goals": 1,
+    "potential": 80,
+    "contract_until": "2028-06"
+   },
+   {
+    "role": -1,
+    "age": 24,
+    "last_match": {
+     "pos": "LCB",
+     "mins": 28,
+     "ovr": 79
+    },
+    "overall": 79,
+    "yellow": 2,
+    "name": "Jarrad Branthwaite",
+    "playerid": 247649,
+    "red": 0,
+    "position": "CB",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 28,
+      "rating": 7
+     },
+     {
+      "date": 20261031,
+      "mins": 1,
+      "rating": 7
+     },
+     {
+      "date": 20261025,
+      "mins": 60,
+      "rating": 7
+     }
+    ],
+    "injury": {
+     "days": 56,
+     "date": 11167
+    },
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 7,
+      "assists": 0,
+      "avg": 475
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 147
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 40000,
+    "app": 9,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 85,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 24,
+    "last_match": {
+     "pos": "ST",
+     "mins": 48,
+     "ovr": 79
+    },
+    "overall": 79,
+    "yellow": 0,
+    "name": "Thierno Barry",
+    "playerid": 276295,
+    "red": 0,
+    "position": "ST",
+    "assists": 7,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 48,
+      "rating": 7
+     },
+     {
+      "date": 20261229,
+      "mins": 45,
+      "rating": 7
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 8
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 3,
+      "assists": 1,
+      "avg": 207
+     },
+     {
+      "compobjid": 821,
+      "goals": 6,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 6,
+      "avg": 1486
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 65
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 29000,
+    "app": 24,
+    "contract_status": 0,
+    "goals": 6,
+    "potential": 84,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 25,
+    "overall": 78,
+    "yellow": 0,
+    "name": "Brennan Johnson",
+    "playerid": 251421,
+    "red": 0,
+    "position": "RW",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20261205,
+      "mins": 7,
+      "rating": 7
+     },
+     {
+      "date": 20261018,
+      "mins": 48,
+      "rating": 7
+     },
+     {
+      "date": 20260829,
+      "mins": 29,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 75
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 5,
+      "assists": 0,
+      "avg": 335
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 40000,
+    "app": 6,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 82,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 27,
+    "last_match": {
+     "pos": "LB",
+     "mins": 90,
+     "ovr": 78
+    },
+    "overall": 78,
+    "yellow": 1,
+    "name": "Vitaliy Mykolenko",
+    "playerid": 244380,
+    "red": 0,
+    "position": "LB",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 3,
+      "assists": 0,
+      "avg": 217
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 0,
+      "avg": 1322
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 127
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 33000,
+    "app": 25,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 78,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 25,
+    "overall": 77,
+    "yellow": 3,
+    "name": "Jake O'Brien",
+    "playerid": 253510,
+    "red": 0,
+    "position": "RB",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20261202,
+      "mins": 68,
+      "rating": 7
+     },
+     {
+      "date": 20261129,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261121,
+      "mins": 90,
+      "rating": 8
+     }
+    ],
+    "injury": {
+     "days": 14,
+     "date": 11130
+    },
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 3,
+      "assists": 0,
+      "avg": 203
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 10,
+      "assists": 0,
+      "avg": 698
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 145
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 27000,
+    "app": 15,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 81,
+    "contract_until": "2028-06"
+   },
+   {
+    "role": -1,
+    "age": 24,
+    "last_match": {
+     "pos": "RB",
+     "mins": 90,
+     "ovr": 69
+    },
+    "overall": 76,
+    "yellow": 2,
+    "name": "Merlin Röhl",
+    "playerid": 259714,
+    "red": 0,
+    "position": "CAM",
+    "assists": 1,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 6
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 3,
+      "assists": 0,
+      "avg": 215
+     },
+     {
+      "compobjid": 821,
+      "goals": 2,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 1,
+      "avg": 1385
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 137
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 20000,
+    "app": 25,
+    "contract_status": 0,
+    "goals": 2,
+    "potential": 82,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 24,
+    "last_match": {
+     "pos": "LM",
+     "mins": 42,
+     "ovr": 75
+    },
+    "overall": 76,
+    "yellow": 1,
+    "name": "Carlos Alcaraz",
+    "playerid": 256402,
+    "red": 0,
+    "position": "CAM",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 42,
+      "rating": 7
+     },
+     {
+      "date": 20261229,
+      "mins": 30,
+      "rating": 7
+     },
+     {
+      "date": 20261226,
+      "mins": 14,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 2,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 162
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 8,
+      "assists": 0,
+      "avg": 532
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 68
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 23000,
+    "app": 11,
+    "contract_status": 0,
+    "goals": 2,
+    "potential": 82,
+    "contract_until": "2027-06"
+   },
+   {
+    "role": -1,
+    "age": 19,
+    "last_match": {
+     "pos": "LDM",
+     "mins": 90,
+     "ovr": 74
+    },
+    "overall": 75,
+    "yellow": 1,
+    "name": "Harrison Armstrong",
+    "playerid": 74413,
+    "red": 0,
+    "position": "CM",
+    "assists": 1,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 90,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 155
+     },
+     {
+      "compobjid": 821,
+      "goals": 1,
+      "competition": "Premier League",
+      "app": 20,
+      "assists": 1,
+      "avg": 1399
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 155
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 12500,
+    "app": 24,
+    "contract_status": 0,
+    "goals": 1,
+    "potential": 85,
+    "contract_until": "2027-06"
+   },
+   {
+    "role": -1,
+    "age": 20,
+    "overall": 75,
+    "yellow": 0,
+    "name": "Tyler Dibling",
+    "playerid": 279497,
+    "red": 0,
+    "position": "RM",
+    "assists": 1,
+    "ratings": [
+     {
+      "date": 20261205,
+      "mins": 24,
+      "rating": 7
+     },
+     {
+      "date": 20261025,
+      "mins": 13,
+      "rating": 7
+     },
+     {
+      "date": 20261004,
+      "mins": 80,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 6,
+      "assists": 1,
+      "avg": 412
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 67
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 17500,
+    "app": 7,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 84,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 33,
+    "last_match": {
+     "pos": "RCB",
+     "mins": 80,
+     "ovr": 75
+    },
+    "overall": 75,
+    "yellow": 0,
+    "name": "Michael Keane",
+    "playerid": 207599,
+    "red": 0,
+    "position": "CB",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 80,
+      "rating": 7
+     },
+     {
+      "date": 20261229,
+      "mins": 90,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 61,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 131
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 11,
+      "assists": 0,
+      "avg": 721
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 137
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 27500,
+    "app": 15,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 76,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 20,
+    "last_match": {
+     "pos": "LM",
+     "mins": 48,
+     "ovr": 74
+    },
+    "overall": 74,
+    "yellow": 0,
+    "name": "Tyrique George",
+    "playerid": 71998,
+    "red": 0,
+    "position": "LM",
+    "assists": 2,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 48,
+      "rating": 7
+     },
+     {
+      "date": 20261229,
+      "mins": 60,
+      "rating": 6
+     },
+     {
+      "date": 20261226,
+      "mins": 76,
+      "rating": 8
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 1,
+      "avg": 164
+     },
+     {
+      "compobjid": 821,
+      "goals": 1,
+      "competition": "Premier League",
+      "app": 19,
+      "assists": 1,
+      "avg": 1328
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 68
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 13500,
+    "app": 22,
+    "contract_status": 0,
+    "goals": 1,
+    "potential": 84,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 16,
+    "last_match": {
+     "pos": "ST",
+     "mins": 42,
+     "ovr": 72
+    },
+    "overall": 73,
+    "yellow": 0,
+    "name": "Test Player",
+    "playerid": 299905,
+    "red": 0,
+    "position": "ST",
+    "assists": 4,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 42,
+      "rating": 7
+     },
+     {
+      "date": 20261229,
+      "mins": 45,
+      "rating": 7
+     },
+     {
+      "date": 20261212,
+      "mins": 41,
+      "rating": 7
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 1,
+      "competition": "European International Cup",
+      "app": 2,
+      "assists": 1,
+      "avg": 160
+     },
+     {
+      "compobjid": 821,
+      "goals": 4,
+      "competition": "Premier League",
+      "app": 13,
+      "assists": 3,
+      "avg": 988
+     },
+     {
+      "compobjid": 630,
+      "goals": 1,
+      "competition": "Carabao Cup",
+      "app": 2,
+      "assists": 0,
+      "avg": 143
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 8400,
+    "app": 17,
+    "contract_status": 0,
+    "goals": 6,
+    "potential": 95,
+    "contract_until": "2030-06"
+   },
+   {
+    "role": -1,
+    "age": 27,
+    "overall": 72,
+    "yellow": 0,
+    "name": "Mark Travers",
+    "playerid": 232284,
+    "red": 0,
+    "position": "GK",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20260825,
+      "mins": 90,
+      "rating": 6
+     }
+    ],
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 63
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 15000,
+    "app": 1,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 75,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": 4,
+    "age": 27,
+    "last_match": {
+     "pos": "RCB",
+     "mins": 10,
+     "ovr": 67
+    },
+    "overall": 70,
+    "yellow": 0,
+    "name": "Max Aarons",
+    "playerid": 240060,
+    "signon_bonus": 135000,
+    "red": 0,
+    "position": "RB",
+    "assists": 0,
+    "ratings": [
+     {
+      "date": 20270102,
+      "mins": 10,
+      "rating": 6
+     }
+    ],
+    "intl_rep": 1,
+    "status_changed": 20260830,
+    "bonus": {
+     "value": 145000,
+     "type": 2,
+     "count": 10,
+     "achieved": 1,
+     "done": false
+    },
+    "by_competition": [
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 1,
+      "assists": 0,
+      "avg": 64
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 0,
+      "avg": 72
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 14500,
+    "app": 2,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 77,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": 5,
+    "age": 17,
+    "overall": 68,
+    "yellow": 0,
+    "name": "Jason Bennett",
+    "playerid": 460033,
+    "red": 0,
+    "position": "RB",
+    "assists": 2,
+    "ratings": [
+     {
+      "date": 20260825,
+      "mins": 90,
+      "rating": 9
+     },
+     {
+      "date": 20260815,
+      "mins": 47,
+      "rating": 7
+     },
+     {
+      "date": 20260728,
+      "mins": 90,
+      "rating": 8
+     }
+    ],
+    "status_changed": 20260726,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 1,
+      "assists": 1,
+      "avg": 82
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 1,
+      "assists": 0,
+      "avg": 65
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 1,
+      "assists": 1,
+      "avg": 94
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 7600,
+    "app": 3,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 69,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 20,
+    "overall": 68,
+    "name": "Adam Aznou",
+    "playerid": 70448,
+    "on_loan": true,
+    "position": "LB",
+    "flags": {
+     "loaned_out": true
+    },
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "wage": 7100,
+    "contract_status_label": "loaned_out",
+    "contract_status": 4,
+    "loaned_out": true,
+    "potential": 82,
+    "contract_until": "2029-06"
+   },
+   {
+    "role": -1,
+    "age": 31,
+    "overall": 64,
+    "yellow": 0,
+    "name": "Tom King",
+    "playerid": 225650,
+    "red": 0,
+    "position": "GK",
+    "assists": 0,
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 5800,
+    "app": 0,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 64,
+    "contract_until": "2027-06"
+   },
+   {
+    "role": -1,
+    "age": 22,
+    "overall": 61,
+    "name": "Elijah Campbell",
+    "playerid": 270373,
+    "on_loan": true,
+    "position": "CB",
+    "flags": {
+     "loaned_out": true
+    },
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "wage": 4720,
+    "contract_status_label": "loaned_out",
+    "contract_status": 4,
+    "loaned_out": true,
+    "potential": 75,
+    "contract_until": "2028-06"
+   },
+   {
+    "role": -1,
+    "age": 20,
+    "overall": 60,
+    "yellow": 0,
+    "name": "Martin Sherif",
+    "playerid": 76507,
+    "red": 0,
+    "position": "ST",
+    "assists": 0,
+    "status_changed": 20260630,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 4720,
+    "app": 0,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 75,
+    "contract_until": "2028-06"
+   },
+   {
+    "role": -1,
+    "age": 20,
+    "overall": 58,
+    "yellow": 0,
+    "name": "Will Tamen",
+    "playerid": 278555,
+    "red": 0,
+    "position": "CB",
+    "assists": 0,
+    "status_changed": 20260705,
+    "intl_rep": 1,
+    "by_competition": [
+     {
+      "compobjid": 1901,
+      "goals": 0,
+      "competition": "European International Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 821,
+      "goals": 0,
+      "competition": "Premier League",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     },
+     {
+      "compobjid": 630,
+      "goals": 0,
+      "competition": "Carabao Cup",
+      "app": 0,
+      "assists": 0,
+      "avg": 0
+     }
+    ],
+    "contract_status_label": "normal",
+    "wage": 4720,
+    "app": 0,
+    "contract_status": 0,
+    "goals": 0,
+    "potential": 73,
+    "contract_until": "2027-12"
+   }
+  ],
+  "last_match_read": true,
+  "membership": "club = user team (GetTeamIdFromPlayerId) or loaned out; sold players in excluded",
+  "club_check_read": true,
+  "count": 26,
+  "contracts_read": true,
+  "ratings_read": true
+ },
+ "last_job": {
+  "wall": "2026-11-05T02:17:28Z",
+  "game_date": "2027-01-06",
+  "name": "match_ratings",
+  "ok": true
+ },
+ "pending_reads": [
+  "squad",
+  "squad_ratings",
+  "flags",
+  "transfers"
+ ],
+ "next_fixtures": [
+  {
+   "compobjid": 821,
+   "date": "2027-01-06",
+   "competition": "Premier League",
+   "away": "Everton",
+   "home_id": 2,
+   "away_id": 7,
+   "home": "Aston Villa"
+  },
+  {
+   "compobjid": 514,
+   "date": "2027-01-10",
+   "competition": "Emirates FA Cup",
+   "away": "Everton",
+   "home_id": 1793,
+   "away_id": 7,
+   "home": "Reading"
+  },
+  {
+   "compobjid": 821,
+   "date": "2027-01-16",
+   "competition": "Premier League",
+   "away": "Sunderland",
+   "home_id": 7,
+   "away_id": 106,
+   "home": "Everton"
+  }
+ ],
+ "league_table": {
+  "compobjid": 823,
+  "team_competitions": [
+   {
+    "compobjid": 552,
+    "teams": 64,
+    "competition": "COBJ552",
+    "games": 0,
+    "team_played": 0
+   },
+   {
+    "compobjid": 568,
+    "teams": 2,
+    "competition": "COBJ568",
+    "games": 0,
+    "team_played": 0
+   },
+   {
+    "compobjid": 635,
+    "teams": 20,
+    "competition": "Premier League",
+    "games": 0,
+    "team_played": 0
+   },
+   {
+    "compobjid": 680,
+    "teams": 46,
+    "competition": "COBJ680",
+    "games": 0,
+    "team_played": 0
+   },
+   {
+    "compobjid": 696,
+    "teams": 2,
+    "competition": "COBJ696",
+    "games": 2,
+    "team_played": 1
+   },
+   {
+    "compobjid": 706,
+    "teams": 32,
+    "competition": "COBJ706",
+    "games": 0,
+    "team_played": 0
+   },
+   {
+    "compobjid": 710,
+    "teams": 2,
+    "competition": "COBJ710",
+    "games": 2,
+    "team_played": 1
+   },
+   {
+    "compobjid": 823,
+    "teams": 20,
+    "competition": "Premier League",
+    "games": 410,
+    "team_played": 20
+   },
+   {
+    "compobjid": 1903,
+    "teams": 8,
+    "competition": "COBJ1903",
+    "games": 24,
+    "team_played": 3
+   }
+  ],
+  "rows": [
+   {
+    "d": 4,
+    "gf": 40,
+    "p": 21,
+    "team": "Arsenal",
+    "l": 3,
+    "pts": 46,
+    "ga": 20,
+    "pos": 1,
+    "w": 14,
+    "teamid": 1
+   },
+   {
+    "d": 3,
+    "gf": 36,
+    "p": 21,
+    "team": "Newcastle United",
+    "l": 5,
+    "pts": 42,
+    "ga": 21,
+    "pos": 2,
+    "w": 13,
+    "teamid": 13
+   },
+   {
+    "d": 6,
+    "gf": 42,
+    "p": 20,
+    "team": "Liverpool",
+    "l": 3,
+    "pts": 39,
+    "ga": 24,
+    "pos": 3,
+    "w": 11,
+    "teamid": 9
+   },
+   {
+    "d": 6,
+    "gf": 32,
+    "p": 21,
+    "team": "Manchester United",
+    "l": 5,
+    "pts": 36,
+    "ga": 24,
+    "pos": 4,
+    "w": 10,
+    "teamid": 11
+   },
+   {
+    "d": 3,
+    "gf": 32,
+    "p": 20,
+    "team": "Aston Villa",
+    "l": 6,
+    "pts": 36,
+    "ga": 24,
+    "pos": 5,
+    "w": 11,
+    "teamid": 2
+   },
+   {
+    "d": 5,
+    "gf": 34,
+    "p": 20,
+    "team": "Everton",
+    "l": 5,
+    "pts": 35,
+    "ga": 25,
+    "pos": 6,
+    "w": 10,
+    "teamid": 7
+   },
+   {
+    "d": 2,
+    "gf": 31,
+    "p": 21,
+    "team": "Brentford",
+    "l": 8,
+    "pts": 35,
+    "ga": 31,
+    "pos": 7,
+    "w": 11,
+    "teamid": 1925
+   },
+   {
+    "d": 6,
+    "gf": 27,
+    "p": 20,
+    "team": "Chelsea",
+    "l": 6,
+    "pts": 30,
+    "ga": 19,
+    "pos": 8,
+    "w": 8,
+    "teamid": 5
+   },
+   {
+    "d": 8,
+    "gf": 30,
+    "p": 21,
+    "team": "AFC Bournemouth",
+    "l": 6,
+    "pts": 29,
+    "ga": 23,
+    "pos": 9,
+    "w": 7,
+    "teamid": 1943
+   },
+   {
+    "d": 7,
+    "gf": 32,
+    "p": 20,
+    "team": "Tottenham Hotspur",
+    "l": 6,
+    "pts": 28,
+    "ga": 28,
+    "pos": 10,
+    "w": 7,
+    "teamid": 18
+   },
+   {
+    "d": 10,
+    "gf": 27,
+    "p": 21,
+    "team": "Ipswich Town",
+    "l": 5,
+    "pts": 28,
+    "ga": 25,
+    "pos": 11,
+    "w": 6,
+    "teamid": 94
+   },
+   {
+    "d": 8,
+    "gf": 28,
+    "p": 20,
+    "team": "Crystal Palace",
+    "l": 6,
+    "pts": 26,
+    "ga": 24,
+    "pos": 12,
+    "w": 6,
+    "teamid": 1799
+   },
+   {
+    "d": 4,
+    "gf": 21,
+    "p": 20,
+    "team": "Nottingham Forest",
+    "l": 9,
+    "pts": 25,
+    "ga": 28,
+    "pos": 13,
+    "w": 7,
+    "teamid": 14
+   },
+   {
+    "d": 7,
+    "gf": 23,
+    "p": 21,
+    "team": "Leeds United",
+    "l": 8,
+    "pts": 25,
+    "ga": 33,
+    "pos": 14,
+    "w": 6,
+    "teamid": 8
+   },
+   {
+    "d": 7,
+    "gf": 20,
+    "p": 21,
+    "team": "Sunderland",
+    "l": 9,
+    "pts": 22,
+    "ga": 28,
+    "pos": 15,
+    "w": 5,
+    "teamid": 106
+   },
+   {
+    "d": 3,
+    "gf": 20,
+    "p": 21,
+    "team": "Fulham",
+    "l": 12,
+    "pts": 21,
+    "ga": 30,
+    "pos": 16,
+    "w": 6,
+    "teamid": 144
+   },
+   {
+    "d": 7,
+    "gf": 19,
+    "p": 20,
+    "team": "Coventry City",
+    "l": 9,
+    "pts": 19,
+    "ga": 28,
+    "pos": 17,
+    "w": 4,
+    "teamid": 1800
+   },
+   {
+    "d": 7,
+    "gf": 17,
+    "p": 20,
+    "team": "Brighton & Hove Albion",
+    "l": 10,
+    "pts": 16,
+    "ga": 28,
+    "pos": 18,
+    "w": 3,
+    "teamid": 1808
+   },
+   {
+    "d": 5,
+    "gf": 17,
+    "p": 20,
+    "team": "Hull City",
+    "l": 13,
+    "pts": 11,
+    "ga": 38,
+    "pos": 19,
+    "w": 2,
+    "teamid": 1952
+   },
+   {
+    "d": 6,
+    "gf": 15,
+    "p": 21,
+    "team": "Wrexham",
+    "l": 14,
+    "pts": 9,
+    "ga": 42,
+    "pos": 20,
+    "w": 1,
+    "teamid": 1947
+   }
+  ],
+  "competition": "Premier League"
+ },
+ "wage_budget_note": "no documented getter in LE v26.3.5 (null = unreadable live; the game shows it in Finance)",
+ "offers": [
+  {
+   "date_source": "first negotiation action",
+   "open": true,
+   "playerid": 71998,
+   "last_action": 6,
+   "sell_id": 7,
+   "club": "Olympique de Marseille",
+   "player": "Tyrique George",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20270102
+    },
+    {
+     "code": 2,
+     "date": 20270102
+    },
+    {
+     "code": 6,
+     "date": 20270102
+    }
+   ],
+   "type": "loan",
+   "date": "2027-01-02",
+   "source": "user_club +0x30",
+   "buy_id": 219,
+   "club_id": 219,
+   "option_to_buy": "undecoded (see raw_loan_offer)",
+   "direction": "received",
+   "status": "buyer offer"
+  },
+  {
+   "status": "buyer offer",
+   "open": true,
+   "playerid": 247649,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 6,
+   "amount": 29900000,
+   "club": "Newcastle United",
+   "player": "Jarrad Branthwaite",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20270102
+    }
+   ],
+   "type": "transfer",
+   "date": "2027-01-02",
+   "sell_id": 7,
+   "buy_id": 13,
+   "club_id": 13,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  },
+  {
+   "date_source": "first negotiation action",
+   "open": true,
+   "playerid": 71998,
+   "last_action": 6,
+   "sell_id": 7,
+   "club": "Rayo Vallecano",
+   "player": "Tyrique George",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20270102
+    },
+    {
+     "code": 2,
+     "date": 20270102
+    },
+    {
+     "code": 6,
+     "date": 20270102
+    }
+   ],
+   "type": "loan",
+   "date": "2027-01-02",
+   "source": "user_club +0x30",
+   "buy_id": 480,
+   "club_id": 480,
+   "option_to_buy": "undecoded (see raw_loan_offer)",
+   "direction": "received",
+   "status": "buyer offer"
+  }
+ ],
+ "offers_read_at": "2027-01-06",
+ "transfers": [
+  {
+   "to_id": 10029,
+   "player": "Ainsley Maitland-Niles",
+   "to": "TSG Hoffenheim",
+   "from_id": 7,
+   "playerid": 225782,
+   "fee": 9000000,
+   "date": "2026-09-09",
+   "type": "transfer",
+   "from": "Everton"
+  },
+  {
+   "to_id": 7,
+   "player": "Max Aarons",
+   "to": "Everton",
+   "from_id": 1943,
+   "playerid": 240060,
+   "fee": 2350000,
+   "date": "2026-08-30",
+   "type": "transfer",
+   "from": "AFC Bournemouth"
+  },
+  {
+   "to_id": 13,
+   "player": "Christian Nørgaard",
+   "to": "Newcastle United",
+   "from_id": 7,
+   "playerid": 210697,
+   "fee": 13700000,
+   "date": "2026-08-18",
+   "type": "transfer",
+   "from": "Everton"
+  },
+  {
+   "to_id": 106,
+   "player": "Hayden Hackney",
+   "to": "Sunderland",
+   "from_id": 7,
+   "playerid": 253054,
+   "fee": 20200000,
+   "date": "2026-08-06",
+   "type": "transfer",
+   "from": "Everton"
+  }
+ ],
+ "le_version": "v26.3.5",
+ "schema": 4,
+ "event_payloads": [
+  {
+   "date": 20270102,
+   "fields": {
+    "playerid": 226754,
+    "kind": "suspension",
+    "matches": 1,
+    "teamid": 1799
+   },
+   "matches": [],
+   "id": 20,
+   "name": "SUSPENSION"
+  },
+  {
+   "date": 20270102,
+   "matches": [],
+   "id": 107,
+   "name": "LIVE_TABLE_FIRST_UPDATE"
+  },
+  {
+   "date": 20270102,
+   "matches": [
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0x20"
+    }
+   ],
+   "id": 107,
+   "name": "LIVE_TABLE_FIRST_UPDATE"
+  },
+  {
+   "date": 20270102,
+   "matches": [],
+   "id": 107,
+   "name": "LIVE_TABLE_FIRST_UPDATE"
+  },
+  {
+   "date": 20270102,
+   "matches": [
+    {
+     "tag": "comp:PL",
+     "v": 821,
+     "off": "0x18"
+    }
+   ],
+   "id": 118,
+   "name": "YOUTH_SCOUT_IS_SENT_ON_MISSION"
+  },
+  {
+   "date": 20270102,
+   "matches": [
+    {
+     "tag": "comp:comp1435",
+     "v": 1435,
+     "off": "0x18"
+    }
+   ],
+   "id": 118,
+   "name": "YOUTH_SCOUT_IS_SENT_ON_MISSION"
+  },
+  {
+   "date": 20270102,
+   "matches": [],
+   "id": 118,
+   "name": "YOUTH_SCOUT_IS_SENT_ON_MISSION"
+  },
+  {
+   "date": 20270102,
+   "matches": [],
+   "id": 118,
+   "name": "YOUTH_SCOUT_IS_SENT_ON_MISSION"
+  },
+  {
+   "date": 20270102,
+   "matches": [],
+   "id": 67,
+   "name": "SCREEN_HAS_DONE_LOADING"
+  },
+  {
+   "date": 20270102,
+   "matches": [],
+   "id": 67,
+   "name": "SCREEN_HAS_DONE_LOADING"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 74,
+   "name": "NUM_DAYS_BEFORE_USER_GAME"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 77,
+   "name": "PLAY_TIME_MORALE_CHANGE"
+  },
+  {
+   "date": 20270103,
+   "matches": [
+    {
+     "tag": "date_ymd",
+     "v": 20260830,
+     "off": "0xC"
+    },
+    {
+     "tag": "date_ymd",
+     "v": 20260830,
+     "off": "0x24"
+    }
+   ],
+   "id": 96,
+   "name": "TRANSFER_BID_COUNTER_OFFER_REJECTED_BY_CPU"
+  },
+  {
+   "date": 20270103,
+   "matches": [
+    {
+     "tag": "date_ymd",
+     "v": 20260830,
+     "off": "0xC"
+    },
+    {
+     "tag": "date_ymd",
+     "v": 20260830,
+     "off": "0x24"
+    }
+   ],
+   "id": 95,
+   "name": "TRANSFER_BID_COUNTER_OFFER"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 159,
+   "name": "USER_CONTRACT_RENEWAL"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 78,
+   "name": "PLAYER_UNHAPPY_WITH_WAGE"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "ovr_b": 78,
+    "kind": "user_squad_player_ovr",
+    "ovr": 78,
+    "playerid": 251421
+   },
+   "matches": [
+    {
+     "tag": "squad_pid",
+     "v": 251421,
+     "off": "0x18"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xD8"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xDC"
+    }
+   ],
+   "name": "BOARD_EMAIL_EVENT",
+   "id": 53,
+   "ours": true
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "ovr_b": 68,
+    "kind": "user_squad_player_ovr",
+    "ovr": 68,
+    "playerid": 460033
+   },
+   "matches": [
+    {
+     "tag": "squad_pid",
+     "v": 460033,
+     "off": "0x18"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xD8"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xDC"
+    }
+   ],
+   "name": "BOARD_EMAIL_EVENT",
+   "id": 53,
+   "ours": true
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "ovr_b": 77,
+    "kind": "user_squad_player_ovr",
+    "ovr": 77,
+    "playerid": 253510
+   },
+   "matches": [
+    {
+     "tag": "squad_pid",
+     "v": 253510,
+     "off": "0x18"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xD8"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xDC"
+    }
+   ],
+   "name": "BOARD_EMAIL_EVENT",
+   "id": 53,
+   "ours": true
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "ovr_b": 65,
+    "kind": "user_squad_player_ovr",
+    "ovr": 65,
+    "playerid": 460036
+   },
+   "matches": [
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xD8"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xDC"
+    }
+   ],
+   "id": 53,
+   "name": "BOARD_EMAIL_EVENT"
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "ovr_b": 60,
+    "kind": "user_squad_player_ovr",
+    "ovr": 60,
+    "playerid": 460037
+   },
+   "matches": [
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xD8"
+    },
+    {
+     "tag": "user_team",
+     "v": 7,
+     "off": "0xDC"
+    }
+   ],
+   "id": 53,
+   "name": "BOARD_EMAIL_EVENT"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 16,
+   "name": "WEEK_PASSED"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 28,
+   "name": "PREPARE_FOR_SAVE"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 26,
+   "name": "ENTERED_HUB_FIRST_TIME"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 67,
+   "name": "SCREEN_HAS_DONE_LOADING"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 67,
+   "name": "SCREEN_HAS_DONE_LOADING"
+  },
+  {
+   "date": 20270103,
+   "matches": [],
+   "id": 67,
+   "name": "SCREEN_HAS_DONE_LOADING"
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "playerid": 247635,
+    "kind": "suspension",
+    "matches": 1,
+    "teamid": 73
+   },
+   "scope": "global",
+   "id": 20
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "kind": "back_from_suspension",
+    "playerid": 265188,
+    "teamid": 115845
+   },
+   "scope": "global",
+   "id": 21
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "playerid": 247229,
+    "kind": "suspension",
+    "matches": 1,
+    "teamid": 115845
+   },
+   "scope": "global",
+   "id": 20
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "injury_type?": 34,
+    "days_out": 4,
+    "teamid": 52,
+    "severity?": 1,
+    "return_date": 20270107,
+    "kind": "injury (global)",
+    "playerid": 231447
+   },
+   "scope": "global",
+   "id": 157
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "kind": "back_from_suspension",
+    "playerid": 70967,
+    "teamid": 17
+   },
+   "scope": "global",
+   "id": 21
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "injury_type?": 35,
+    "days_out": 11,
+    "teamid": 65,
+    "severity?": 1,
+    "return_date": 20270114,
+    "kind": "injury (global)",
+    "playerid": 269493
+   },
+   "scope": "global",
+   "id": 157
+  },
+  {
+   "date": 20270103,
+   "fields": {
+    "kind": "back_from_suspension",
+    "playerid": 225201,
+    "teamid": 448
+   },
+   "scope": "global",
+   "id": 21
+  }
+ ],
+ "raw_events": [
+  {
+   "t": 1793844886,
+   "id": 53,
+   "name": "BOARD_EMAIL_EVENT"
+  },
+  {
+   "t": 1793844886,
+   "id": 53,
+   "name": "BOARD_EMAIL_EVENT"
+  },
+  {
+   "t": 1793844886,
+   "id": 53,
+   "name": "BOARD_EMAIL_EVENT"
+  },
+  {
+   "t": 1793844886,
+   "id": 68,
+   "name": "USER_TEAM_PLAYER_FORM_CHANGE"
+  },
+  {
+   "t": 1793844886,
+   "id": 27,
+   "name": "DATA_READY"
+  },
+  {
+   "t": 1793844886,
+   "id": 5,
+   "name": "ABOUT_TO_INIT_MODE"
+  },
+  {
+   "t": 1793844886,
+   "id": 157,
+   "name": "USER_TRANSFER_OFFER_RECEIVED"
+  },
+  {
+   "t": 1793844886,
+   "id": 10,
+   "name": "USER_INTERNATIONAL_MATCH_COMPLETED"
+  },
+  {
+   "t": 1793844886,
+   "id": 157,
+   "name": "USER_TRANSFER_OFFER_RECEIVED"
+  },
+  {
+   "t": 1793844886,
+   "id": 10,
+   "name": "USER_INTERNATIONAL_MATCH_COMPLETED"
+  },
+  {
+   "t": 1793844886,
+   "id": 20,
+   "name": "SUSPENSION"
+  },
+  {
+   "t": 1793844886,
+   "id": 157,
+   "name": "USER_TRANSFER_OFFER_RECEIVED"
+  },
+  {
+   "t": 1793844886,
+   "id": 10,
+   "name": "USER_INTERNATIONAL_MATCH_COMPLETED"
+  },
+  {
+   "t": 1793844886,
+   "id": 157,
+   "name": "USER_TRANSFER_OFFER_RECEIVED"
+  },
+  {
+   "t": 1793844886,
+   "id": 107,
+   "name": "LIVE_TABLE_FIRST_UPDATE"
+  },
+  {
+   "t": 1793844886,
+   "id": 10,
+   "name": "USER_INTERNATIONAL_MATCH_COMPLETED"
+  },
+  {
+   "t": 1793844886,
+   "id": 157,
+   "name": "USER_TRANSFER_OFFER_RECEIVED"
+  },
+  {
+   "t": 1793844886,
+   "id": 107,
+   "name": "LIVE_TABLE_FIRST_UPDATE"
+  },
+  {
+   "t": 1793844886,
+   "id": 10,
+   "name": "USER_INTERNATIONAL_MATCH_COMPLETED"
+  },
+  {
+   "t": 1793844886,
+   "id": 157,
+   "name": "USER_TRANSFER_OFFER_RECEIVED"
+  }
+ ],
+ "next_fixture": {
+  "compobjid": 821,
+  "date": "2027-01-06",
+  "competition": "Premier League",
+  "away": "Everton",
+  "home_id": 2,
+  "away_id": 7,
+  "home": "Aston Villa"
+ },
+ "board": "unreadable live: no documented board/objective getter (Test Round 1: take it from Board Objectives)",
+ "game_date_source": "live GetCurrentDate (preferred; the save-file date is only an estimate)",
+ "mode": "manager",
+ "offers_history": [
+  {
+   "status": "buyer accepted seller's terms",
+   "direction": "received",
+   "playerid": 225782,
+   "offers_count": 1,
+   "requests_count": 1,
+   "last_action": 4,
+   "amount": 9500000,
+   "club": "TSG Hoffenheim",
+   "player": "Ainsley Maitland-Niles",
+   "open": false,
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260903
+    },
+    {
+     "code": 2,
+     "date": 20260903
+    },
+    {
+     "code": 4,
+     "date": 20260903
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-09-03",
+   "sell_id": 7,
+   "buy_id": 10029,
+   "club_id": 10029,
+   "source": "user_club +0x28",
+   "asking": 9000000,
+   "date_source": "first negotiation action"
+  },
+  {
+   "date_source": "first negotiation action",
+   "exchange_value": 20900000,
+   "direction": "received",
+   "playerid": 247649,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 1,
+   "amount": 14700000,
+   "club": "Manchester United",
+   "exchange_playerid": 253306,
+   "player": "Jarrad Branthwaite",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260831
+    },
+    {
+     "code": 1,
+     "date": 20260901
+    }
+   ],
+   "open": false,
+   "date": "2026-08-31",
+   "status": "seller rejected (or auto-rejected at window close)",
+   "buy_id": 11,
+   "club_id": 11,
+   "type": "transfer",
+   "sell_id": 7,
+   "source": "user_club +0x28"
+  },
+  {
+   "date_source": "first negotiation action",
+   "open": false,
+   "playerid": 71998,
+   "last_action": 1,
+   "sell_id": 7,
+   "club": "Norwich City",
+   "player": "Tyrique George",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260831
+    },
+    {
+     "code": 2,
+     "date": 20260831
+    },
+    {
+     "code": 6,
+     "date": 20260831
+    },
+    {
+     "code": 2,
+     "date": 20260831
+    },
+    {
+     "code": 6,
+     "date": 20260831
+    },
+    {
+     "code": 1,
+     "date": 20260831
+    }
+   ],
+   "type": "loan",
+   "date": "2026-08-31",
+   "source": "user_club +0x30",
+   "buy_id": 1792,
+   "club_id": 1792,
+   "option_to_buy": "undecoded (see raw_loan_offer)",
+   "direction": "received",
+   "status": "seller rejected (or auto-rejected at window close)"
+  },
+  {
+   "status": "ended by buyer / expired",
+   "direction": "received",
+   "playerid": 225782,
+   "offers_count": 2,
+   "requests_count": 1,
+   "last_action": 5,
+   "amount": 10000000,
+   "club": "Burnley",
+   "player": "Ainsley Maitland-Niles",
+   "open": false,
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260829
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 3,
+     "date": 20260830
+    },
+    {
+     "code": 5,
+     "date": 20260831
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-29",
+   "sell_id": 7,
+   "buy_id": 1796,
+   "club_id": 1796,
+   "source": "user_club +0x28",
+   "asking": 19530000,
+   "date_source": "first negotiation action"
+  },
+  {
+   "status": "seller accepted",
+   "open": false,
+   "playerid": 76507,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 0,
+   "amount": 1100000,
+   "club": "Sparta Rotterdam",
+   "player": "Martin Sherif",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260826
+    },
+    {
+     "code": 0,
+     "date": 20260830
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-26",
+   "sell_id": 7,
+   "buy_id": 100646,
+   "club_id": 100646,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  },
+  {
+   "date_source": "first negotiation action",
+   "open": false,
+   "playerid": 232284,
+   "last_action": 5,
+   "sell_id": 7,
+   "club": "Wolverhampton Wanderers",
+   "player": "Mark Travers",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260825
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 5,
+     "date": 20260830
+    }
+   ],
+   "type": "loan",
+   "date": "2026-08-25",
+   "source": "user_club +0x30",
+   "buy_id": 110,
+   "club_id": 110,
+   "option_to_buy": "undecoded (see raw_loan_offer)",
+   "direction": "received",
+   "status": "ended by buyer / expired"
+  },
+  {
+   "status": "buyer accepted seller's terms",
+   "direction": "received",
+   "playerid": 210697,
+   "offers_count": 1,
+   "requests_count": 1,
+   "last_action": 4,
+   "amount": 11700000,
+   "club": "Newcastle United",
+   "player": "Christian Nørgaard",
+   "open": false,
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260815
+    },
+    {
+     "code": 2,
+     "date": 20260815
+    },
+    {
+     "code": 4,
+     "date": 20260815
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-15",
+   "sell_id": 7,
+   "buy_id": 13,
+   "club_id": 13,
+   "source": "user_club +0x28",
+   "asking": 13700000,
+   "date_source": "first negotiation action"
+  },
+  {
+   "status": "buyer accepted seller's terms",
+   "direction": "received",
+   "playerid": 279497,
+   "offers_count": 2,
+   "requests_count": 2,
+   "last_action": 4,
+   "amount": 15500000,
+   "club": "Brighton & Hove Albion",
+   "player": "Tyler Dibling",
+   "open": false,
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260813
+    },
+    {
+     "code": 2,
+     "date": 20260813
+    },
+    {
+     "code": 6,
+     "date": 20260813
+    },
+    {
+     "code": 2,
+     "date": 20260813
+    },
+    {
+     "code": 4,
+     "date": 20260813
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-13",
+   "sell_id": 7,
+   "buy_id": 1808,
+   "club_id": 1808,
+   "source": "user_club +0x28",
+   "asking": 16800000,
+   "date_source": "first negotiation action"
+  },
+  {
+   "status": "seller rejected (or auto-rejected at window close)",
+   "open": false,
+   "playerid": 204935,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 1,
+   "amount": 30000000,
+   "club": "Liverpool",
+   "player": "Jordan Pickford",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260812
+    },
+    {
+     "code": 1,
+     "date": 20260812
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-12",
+   "sell_id": 7,
+   "buy_id": 9,
+   "club_id": 9,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  },
+  {
+   "date_source": "first negotiation action",
+   "exchange_value": 14300000,
+   "direction": "received",
+   "playerid": 253510,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 1,
+   "amount": 700000,
+   "club": "Athletic Club",
+   "exchange_playerid": 239614,
+   "player": "Jake O'Brien",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260812
+    },
+    {
+     "code": 1,
+     "date": 20260812
+    }
+   ],
+   "open": false,
+   "date": "2026-08-12",
+   "status": "seller rejected (or auto-rejected at window close)",
+   "buy_id": 448,
+   "club_id": 448,
+   "type": "transfer",
+   "sell_id": 7,
+   "source": "user_club +0x28"
+  },
+  {
+   "status": "seller rejected (or auto-rejected at window close)",
+   "open": false,
+   "playerid": 207599,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 1,
+   "amount": 3550000,
+   "club": "West Ham United",
+   "player": "Michael Keane",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260807
+    },
+    {
+     "code": 1,
+     "date": 20260807
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-07",
+   "sell_id": 7,
+   "buy_id": 19,
+   "club_id": 19,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  },
+  {
+   "status": "seller accepted",
+   "open": false,
+   "playerid": 253054,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 0,
+   "amount": 20200000,
+   "club": "Sunderland",
+   "player": "Hayden Hackney",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260803
+    },
+    {
+     "code": 0,
+     "date": 20260803
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-03",
+   "sell_id": 7,
+   "buy_id": 106,
+   "club_id": 106,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  },
+  {
+   "status": "ended by buyer / expired",
+   "open": false,
+   "playerid": 204935,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 5,
+   "amount": 31500000,
+   "club": "Tottenham Hotspur",
+   "player": "Jordan Pickford",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260714
+    },
+    {
+     "code": 5,
+     "date": 20260721
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-07-14",
+   "sell_id": 7,
+   "buy_id": 18,
+   "club_id": 18,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  },
+  {
+   "status": "ended by buyer / expired",
+   "open": false,
+   "playerid": 259714,
+   "offers_count": 1,
+   "requests_count": 0,
+   "last_action": 5,
+   "amount": 12600000,
+   "club": "Fenerbahçe SK",
+   "player": "Merlin Röhl",
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260709
+    },
+    {
+     "code": 5,
+     "date": 20260716
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-07-09",
+   "sell_id": 7,
+   "buy_id": 326,
+   "club_id": 326,
+   "source": "user_club +0x28",
+   "direction": "received",
+   "date_source": "first negotiation action"
+  }
+ ],
+ "events": [
+  {
+   "date": "2027-01-03",
+   "name": "SUSPENSION",
+   "count": 2
+  },
+  {
+   "date": "2027-01-03",
+   "name": "BACK_FROM_SUSPENSION",
+   "count": 3
+  },
+  {
+   "date": "2027-01-03",
+   "name": "USER_TRANSFER_OFFER_RECEIVED",
+   "count": 4
+  },
+  {
+   "date": "2027-01-04",
+   "name": "PLAY_TIME_MORALE_CHANGE",
+   "count": 2
+  },
+  {
+   "date": "2027-01-04",
+   "name": "TRANSFER_BID_COUNTER_OFFER_REJECTED_BY_CPU",
+   "count": 2
+  },
+  {
+   "date": "2027-01-04",
+   "name": "TRANSFER_BID_COUNTER_OFFER",
+   "count": 2
+  },
+  {
+   "date": "2027-01-04",
+   "name": "USER_CONTRACT_RENEWAL",
+   "count": 2
+  },
+  {
+   "date": "2027-01-04",
+   "name": "PLAYER_UNHAPPY_WITH_WAGE",
+   "count": 2
+  },
+  {
+   "date": "2027-01-04",
+   "name": "YOUTH_SCOUT_FIRED",
+   "count": 1
+  },
+  {
+   "date": "2027-01-04",
+   "name": "USER_LOAN_PLAYER_STAGE_FINISHED",
+   "count": 1
+  },
+  {
+   "date": "2027-01-05",
+   "name": "USER_LOAN_PLAYER_STAGE_FINISHED",
+   "count": 1
+  },
+  {
+   "date": "2027-01-05",
+   "name": "PLAY_TIME_MORALE_CHANGE",
+   "count": 4
+  },
+  {
+   "date": "2027-01-05",
+   "name": "TRANSFER_BID_COUNTER_OFFER_REJECTED_BY_CPU",
+   "count": 4
+  },
+  {
+   "date": "2027-01-05",
+   "name": "TRANSFER_BID_COUNTER_OFFER",
+   "count": 4
+  },
+  {
+   "date": "2027-01-05",
+   "name": "USER_CONTRACT_RENEWAL",
+   "count": 4
+  },
+  {
+   "date": "2027-01-05",
+   "name": "PLAYER_UNHAPPY_WITH_WAGE",
+   "count": 4
+  },
+  {
+   "date": "2027-01-05",
+   "name": "USER_TRANSFER_OFFER_RECEIVED",
+   "count": 4
+  },
+  {
+   "date": "2027-01-05",
+   "name": "SUSPENSION",
+   "count": 1
+  },
+  {
+   "date": "2027-01-06",
+   "name": "PLAY_TIME_MORALE_CHANGE",
+   "count": 5
+  },
+  {
+   "date": "2027-01-06",
+   "name": "TRANSFER_BID_COUNTER_OFFER_REJECTED_BY_CPU",
+   "count": 5
+  },
+  {
+   "date": "2027-01-06",
+   "name": "TRANSFER_BID_COUNTER_OFFER",
+   "count": 5
+  },
+  {
+   "date": "2027-01-06",
+   "name": "USER_CONTRACT_RENEWAL",
+   "count": 5
+  },
+  {
+   "date": "2027-01-06",
+   "name": "PLAYER_UNHAPPY_WITH_WAGE",
+   "count": 5
+  }
+ ],
+ "last_results": [
+  {
+   "compobjid": 821,
+   "date": "2027-01-02",
+   "score": "0-2",
+   "competition": "Premier League",
+   "away": "AFC Bournemouth",
+   "home_id": 7,
+   "away_id": 1943,
+   "home": "Everton"
+  },
+  {
+   "compobjid": 821,
+   "date": "2026-12-29",
+   "score": "0-3",
+   "competition": "Premier League",
+   "away": "Liverpool",
+   "home_id": 7,
+   "away_id": 9,
+   "home": "Everton"
+  },
+  {
+   "compobjid": 821,
+   "date": "2026-12-26",
+   "score": "2-2",
+   "competition": "Premier League",
+   "away": "Everton",
+   "home_id": 106,
+   "away_id": 7,
+   "home": "Sunderland"
+  },
+  {
+   "compobjid": 821,
+   "date": "2026-12-19",
+   "score": "2-2",
+   "competition": "Premier League",
+   "away": "Arsenal",
+   "home_id": 7,
+   "away_id": 1,
+   "home": "Everton"
+  },
+  {
+   "compobjid": 821,
+   "date": "2026-12-12",
+   "score": "1-1",
+   "competition": "Premier League",
+   "away": "Everton",
+   "home_id": 1800,
+   "away_id": 7,
+   "home": "Coventry City"
+  }
+ ],
+ "player_talks": [
+  {
+   "player": "Max Aarons",
+   "vector": "user_player_transfer",
+   "buy_id": 7,
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 4,
+     "date": 20260830
+    }
+   ],
+   "sell_id": 1943,
+   "playerid": 240060
+  },
+  {
+   "action_idx": 2,
+   "vector": "ai_player_transfer",
+   "last_action_date": 20260806,
+   "playerid": 253054,
+   "buy_id": 106,
+   "sell_id": 7,
+   "player": "Hayden Hackney",
+   "seller_accepted": true
+  },
+  {
+   "action_idx": 2,
+   "vector": "ai_player_transfer",
+   "last_action_date": 20260816,
+   "playerid": 279497,
+   "buy_id": 1808,
+   "sell_id": 7,
+   "player": "Tyler Dibling",
+   "seller_accepted": false
+  },
+  {
+   "buyer_accepted": true,
+   "vector": "ai_player_transfer",
+   "seller_accepted": true,
+   "playerid": 210697,
+   "buy_id": 13,
+   "player": "Christian Nørgaard",
+   "sell_id": 7,
+   "last_action_date": 20260818,
+   "action_idx": 4
+  },
+  {
+   "action_idx": 0,
+   "vector": "ai_player_transfer",
+   "last_action_date": 20260901,
+   "playerid": 76507,
+   "buy_id": 100646,
+   "sell_id": 7,
+   "player": "Martin Sherif",
+   "seller_accepted": false
+  },
+  {
+   "action_idx": 2,
+   "vector": "ai_player_transfer",
+   "last_action_date": 20260909,
+   "playerid": 225782,
+   "buy_id": 10029,
+   "sell_id": 7,
+   "player": "Ainsley Maitland-Niles",
+   "seller_accepted": true
+  }
+ ],
+ "transfer_budget": 565109781,
+ "bridge": "ro14",
+ "bids": [
+  {
+   "status": "seller accepted",
+   "direction": "sent",
+   "playerid": 240060,
+   "offers_count": 2,
+   "requests_count": 2,
+   "last_action": 0,
+   "amount": 2350000,
+   "club": "AFC Bournemouth",
+   "player": "Max Aarons",
+   "open": false,
+   "actions": [
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 2,
+     "date": 20260830
+    },
+    {
+     "code": 6,
+     "date": 20260830
+    },
+    {
+     "code": 0,
+     "date": 20260830
+    }
+   ],
+   "type": "transfer",
+   "date": "2026-08-30",
+   "sell_id": 1943,
+   "buy_id": 7,
+   "club_id": 1943,
+   "source": "user_club +0x28",
+   "asking": 2350000,
+   "date_source": "first negotiation action"
+  }
+ ],
+ "reason": "day_passed",
+ "product": "fc26-career-mcp",
+ "compat": "full",
+ "memory_reads": true,
+ "compat_reason": null,
+ "targets": [
+  {
+   "playerid": 253054,
+   "name": "Hayden Hackney",
+   "team": null,
+   "teamid": 7,
+   "age": 26,
+   "position": "RB",
+   "overall": 74,
+   "potential": 78,
+   "attributes": {
+    "pace": 80,
+    "shooting": 55,
+    "passing": 68,
+    "dribbling": 74,
+    "defending": 70,
+    "physical": 66
+   }
+  }
+ ],
+ "events_note": "events[] are GLOBAL counts of event names (never attributed); event_payloads[] carry their own teamid/playerid and a scope"
+}

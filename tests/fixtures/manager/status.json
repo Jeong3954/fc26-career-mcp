@@ -1,0 +1,15 @@
+{
+ "schema": 1,
+ "product": "fc26-career-mcp",
+ "bridge": "ro14",
+ "le_version": "v26.3.5",
+ "compat": "full",
+ "memory_reads": true,
+ "reason": "career_loaded",
+ "supported_le_versions": [
+  "v26.3.5"
+ ],
+ "mode": "manager",
+ "data_dir": "C:\\Users\\test\\Documents\\FC26CareerMCP",
+ "written": "2026-11-05T02:17:28Z"
+}
