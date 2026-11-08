@@ -163,6 +163,9 @@ Tell the human, in their language, exactly this:
    -> load `<LE>\lua\autorun\fc26cm_bridge.lua` -> Execute (F5) while the hub is on screen.
 4. Restart the AI client completely (Claude Desktop: tray icon -> Quit).
 5. Ask the assistant: "How is my career going?" (it should call `fc26_status` first).
+6. For a fresh league table / fixtures right now (`fc26_refresh_world`): after loading the career, open and
+   close a hub menu twice (the first event only settles), stay idle on the hub 15 s, then ask the assistant to
+   refresh and open/close a hub menu once more.
 
 Then run the health check again (step 5): `bridge heartbeat` and `snapshot.json` should be PASS.
 

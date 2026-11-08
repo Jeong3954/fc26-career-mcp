@@ -11,7 +11,7 @@ version runs like the `partial` column below (no game crash risk from memory rea
 
 | Live Editor | FC 26 title update | Game exe version | Status | Notes |
 |---|---|---|---|---|
-| v26.3.5 | TU 1.6.3 | 1.0.139.20381 | **full** | verified; all 8 tools, memory reads after opt-in (`enable_memory`) |
+| v26.3.5 | TU 1.6.3 | 1.0.139.20381 | **full** | verified; all 9 tools, memory reads after opt-in (`enable_memory`) |
 | other versions | any | any | **partial** | documented-API data only; memory reads off for the session |
 
 `fc26_status` and `status.json` report the effective `compat`, `memory_reads` and the

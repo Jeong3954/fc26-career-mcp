@@ -55,6 +55,13 @@ Please install "FC26 Career MCP" on this PC for me.
 | `fc26_transfers` | your club's transfers, open offers, offer history, bids, talks, targets - or the whole market + club finance |
 | `fc26_save_data` | save-only tables: national teams, managers, board history, suspensions, loans, pre-signed, youth, grudge/love, previous clubs, team roles, ... |
 | `fc26_global_events` | the game's event feed (global, never attributed to your club) + decoded payloads with scope |
+| `fc26_refresh_world` | asks the bridge for ONE live read of every standings table and fixture/result right now (1.0.5+) |
+
+**Refresh standings/fixtures on demand** (`fc26_refresh_world`, CLI `fc26cm_cli.py refresh`): after loading a
+career, open and close a hub menu **twice** (the first event only settles), stay idle on the hub 15 s, then call
+refresh and open/close a hub menu once more - the bridge reads on that quiet hub event (one standings + fixtures
+read, never during a match, sim or save; works with memory reads off). A failed read blocks refresh until the game
+restarts; an empty file `disable_read_now` in the data folder turns it off.
 
 Every answer carries `_meta`: source (live / save), scope (your club / your player / global),
 in-game date, data age and warnings - so the assistant can say what a value is "as of".
@@ -116,7 +123,8 @@ No network: the server speaks stdio to your client or listens on 127.0.0.1 only.
 (no write handlers, no Lua from the assistant, no table dumps). Offline career only; no
 anti-cheat bypass of any kind. Every game call under `pcall`; bounded reads (one heavy read per
 game day, none during matches or multi-day sims); memory reads are **off by default** since 1.0.3 (opt in with an
-empty `enable_memory` file in the data folder) and canary checks disable them on anything suspicious.
+empty `enable_memory` file in the data folder) and canary checks disable them on anything suspicious. The one
+exception is `fc26_refresh_world`: one standings + fixtures read per request, on a quiet hub only (1.0.5).
 Full text: [docs/SAFETY.md](docs/SAFETY.md).
 
 ## Compatibility

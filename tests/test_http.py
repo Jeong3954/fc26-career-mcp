@@ -43,7 +43,7 @@ class HttpTests(unittest.TestCase):
     def test_index_health_openapi_tools(self):
         idx = self.get("/")
         self.assertTrue(idx["read_only"])
-        self.assertEqual(len(idx["tools"]), 8)
+        self.assertEqual(len(idx["tools"]), 9)
         h = self.get("/health")
         self.assertTrue(h["ok"])
         self.assertEqual(h["mode"], "manager")
@@ -55,7 +55,7 @@ class HttpTests(unittest.TestCase):
         self.assertEqual(spec["servers"][0]["url"], self.base)
         params = {p["name"] for p in spec["paths"]["/api/fc26_competitions"]["get"]["parameters"]}
         self.assertIn("compobjid", params)
-        self.assertEqual(len(self.get("/api/tools")["tools"]), 8)
+        self.assertEqual(len(self.get("/api/tools")["tools"]), 9)
 
     def test_rest_get_post_and_errors(self):
         r = self.get("/api/fc26_competitions?view=top_players&stat=goals&limit=2")
@@ -92,7 +92,7 @@ class HttpTests(unittest.TestCase):
         self.assertEqual(status, 202)
         self.assertEqual(body, "")
         r = self.post("/mcp", {"jsonrpc": "2.0", "id": 2, "method": "tools/list"})
-        self.assertEqual(len(r["result"]["tools"]), 8)
+        self.assertEqual(len(r["result"]["tools"]), 9)
         r = self.post("/mcp", {"jsonrpc": "2.0", "id": 3, "method": "tools/call",
                                "params": {"name": "fc26_transfers", "arguments": {"scope": "market", "limit": 1}}})
         self.assertFalse(r["result"]["isError"])

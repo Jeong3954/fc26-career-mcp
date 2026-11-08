@@ -42,6 +42,7 @@ COMMANDS = {
     "market": ("fc26_transfers", {"scope": "market"}),
     "save": ("fc26_save_data", {}),
     "events": ("fc26_global_events", {}),
+    "refresh": ("fc26_refresh_world", {}),
 }
 
 
@@ -91,6 +92,19 @@ def render(name, res):
     else:
         lines.append(core.to_json(res, compact=True))
     return "\n".join(lines) + "\n"
+
+
+def r_refresh(res):
+    out = ["REFRESH status=%s request=%s" % (res.get("status", "cancelled=%s" % res.get("cancelled")), res.get("request_id"))]
+    r = res.get("result") or {}
+    if r:
+        out.append("ok=%s game_date=%s tables=%s played=%s upcoming=%s seconds=%s%s" % (
+            r.get("ok"), r.get("game_date"), r.get("tables"), r.get("fixtures_played"), r.get("fixtures_upcoming"),
+            r.get("seconds"), (" error=" + str(r.get("error"))) if r.get("error") else ""))
+    for k in ("bridge_waiting_for", "next", "hint"):
+        if res.get(k):
+            out.append("%s: %s" % (k, res[k]))
+    return out
 
 
 def r_status(res):
@@ -325,7 +339,7 @@ def r_events(res):
 
 RENDERERS = {"fc26_status": r_status, "fc26_my_career": r_career, "fc26_squad": r_squad, "fc26_player": r_player,
              "fc26_competitions": r_competitions, "fc26_transfers": r_transfers, "fc26_save_data": r_save,
-             "fc26_global_events": r_events}
+             "fc26_global_events": r_events, "fc26_refresh_world": r_refresh}
 
 
 # ----------------------------------------------------------------------------------------------
@@ -350,6 +364,9 @@ def build_parser():
     ap.add_argument("--days", type=int, default=None)
     ap.add_argument("--ours", action="store_true", help="events: only rows attributed to the user")
     ap.add_argument("--attributes", action="store_true", help="squad: full rows with attributes")
+    ap.add_argument("--wait", type=int, default=None, help="refresh: seconds to wait for the bridge (default 60)")
+    ap.add_argument("--keep-pending", action="store_true", help="refresh: leave the request for a later hub event")
+    ap.add_argument("--cancel", action="store_true", help="refresh: withdraw a pending request")
     return ap
 
 
@@ -382,6 +399,14 @@ def args_for(cmd, ns):
             a["days"] = ns.days
         if ns.ours:
             a["ours_only"] = True
+    if cmd == "refresh":
+        if ns.wait is not None:
+            a["wait_seconds"] = ns.wait
+        if ns.keep_pending:
+            a["keep_pending"] = True
+        if ns.cancel:
+            a["cancel"] = True
+        return name, a
     if ns.limit is not None and cmd not in ("career", "status"):
         a["limit"] = ns.limit
     return name, a

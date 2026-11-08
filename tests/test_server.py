@@ -26,9 +26,9 @@ def call(name, args=None, data_dir=MANAGER, **kw):
 
 
 class RegistryTests(unittest.TestCase):
-    def test_eight_tools_with_schemas(self):
+    def test_tools_with_schemas(self):
         specs = core.tool_specs()
-        self.assertEqual([t["name"] for t in specs], TOOLS)
+        self.assertEqual([t["name"] for t in specs], TOOLS + ["fc26_refresh_world"])  # refresh: test_refresh_world
         for t in specs:
             self.assertEqual(t["inputSchema"]["type"], "object")
             self.assertNotIn("run", t)
@@ -316,7 +316,7 @@ class StdioTransportTests(unittest.TestCase):
         by_id = {r.get("id"): r for r in res}
         self.assertEqual(by_id[1]["result"]["protocolVersion"], "2024-11-05")
         self.assertEqual(by_id[1]["result"]["serverInfo"]["name"], "fc26-career-mcp")
-        self.assertEqual(len(by_id[2]["result"]["tools"]), 8)
+        self.assertEqual(len(by_id[2]["result"]["tools"]), 9)
         call_res = by_id[3]["result"]
         self.assertFalse(call_res["isError"])
         self.assertEqual(json.loads(call_res["content"][0]["text"])["_meta"]["scope"], "user_club")

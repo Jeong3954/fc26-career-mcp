@@ -40,7 +40,7 @@ class StaticGuardTest(unittest.TestCase):
         # 1.0.3: memory reads are off unless enable_memory exists; no game call in sims / match flow / settle time
         s = src()
         self.assertIn('io.open(ROOT .. "\\\\enable_memory", "r")', s)
-        self.assertIn("OFFS ~= nil and not FC26CD.mem_disabled and mem_opt_in()", s)
+        self.assertIn("OFFS ~= nil and not FC26CD.mem_disabled and (FC26CD.read_now_on or mem_opt_in())", s)
         self.assertIn('if not mem_opt_in() then return "off_by_default" end', s)
         self.assertNotIn("force_open", s)  # manual runs cannot bypass a closed gate
         self.assertNotIn('mem_read, "ReadBytes", a, n, n, true', s)

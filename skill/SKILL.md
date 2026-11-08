@@ -19,7 +19,11 @@ save file. Nothing here writes to the game. Nothing leaves the user's PC.
    (`fc26_my_career` for an overview, `fc26_squad` for the squad, `fc26_player` for one
    player, `fc26_competitions` for tables/fixtures/top lists, `fc26_transfers` for
    dealings, `fc26_save_data` for save-only tables, `fc26_global_events` for the news feed).
-3. Read `_meta` on every response: `source` (live / save / live+save), `scope`
+3. Standings or fixtures older than the user wants (`fc26_status` how_to_refresh): after loading a career the
+   user opens and closes a hub menu twice (the first event only settles) and stays idle on the hub 15 s; then
+   call `fc26_refresh_world` and ask them to open/close a hub menu once more. One read per request; a `failed`
+   result blocks it until the game restarts - do not retry.
+4. Read `_meta` on every response: `source` (live / save / live+save), `scope`
    (user_club / user_player / global / mixed), `live_game_date`, `snapshot_age_sec`,
    `heartbeat_age_sec`, `save_as_of`, `compat`, `warnings[]`. Repeat relevant warnings to
    the user in plain words.

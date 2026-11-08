@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.5 - on-demand world read
+
+- New tool `fc26_refresh_world` (MCP, REST, CLI `fc26cm_cli.py refresh`): writes `read_now` in the data folder and
+  waits for `read_now_result.json` (`wait_seconds`, `keep_pending`, `cancel`). How: after loading a career, open and
+  close a hub menu twice (the first event only settles), stay idle on the hub 15 s, then call it and open/close a
+  hub menu once more.
+- Bridge: one standings + fixtures read per request, even with memory reads off (still off by default). Runs only
+  on a quiet hub event (15 s after any day / match / sim / season / save / load / exit event, no pending day or
+  post-match work, not in a match); the request is deleted before the first read and `read_now_inflight` marks
+  the read (a leftover marker refuses later requests). No event payloads, no transfer walks; the first failed read
+  aborts, writes nothing and blocks requests until the game restarts. Requests expire after 15 min;
+  `disable_read_now` refuses all. Writes world.json (transfers not read) and the snapshot's last_results /
+  next_fixtures / league_table (`memory.source = "read_now"`). Verified in game (0.44-0.47 s per read).
+- Tests: `tests/test_bridge_read_now.py` (Lua mock run, needs lupa), `tests/test_refresh_world.py`.
+
 ## 1.0.4 - lifecycle safety and lighter reads
 
 - Block save/exit/new-career flows until a new settled hub event; defer the hub readiness call, reject reentrant callbacks, and remove the manual memory-gate bypass. Memory remains opt-in.

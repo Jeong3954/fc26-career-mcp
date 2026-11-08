@@ -26,6 +26,7 @@ pastes from `server\fc26cm_cli.py`. The data and rules are identical in every tr
 | `fc26_transfers` | `scope` user_club (offers, bids, talks, targets, `include_history`) or market (all clubs, finance) |
 | `fc26_save_data` | `category` national_teams, managers, board_history, suspensions, loans, presigned, youth, grudge_love, previous_clubs, team_roles, season_start, squad_ranking, news_events, summary |
 | `fc26_global_events` | the event feed: names (global counts) + decoded payloads with a scope per row |
+| `fc26_refresh_world` | asks the bridge (1.0.5+) for ONE live standings + fixtures read now, waits for it (`wait_seconds`, `keep_pending`, `cancel`) |
 
 ## Every answer carries `_meta`
 
@@ -77,6 +78,11 @@ a `hint`; tell the user what to do, do not guess the data.
    `fc26_transfers` for dealings, `fc26_save_data` for save-only tables, `fc26_global_events`
    for the news feed).
 3. Answer with the date the data is as of, the scope, and the warnings that matter.
+
+Fresh table/fixtures before the next game day: ask the user, after loading a career, to open and close a hub
+menu twice (the first event only settles) and stay idle on the hub 15 s; then call `fc26_refresh_world` and have
+them open/close a hub menu once more while it waits. On `failed` do not retry (the bridge blocks it until the game
+restarts); on `withdrawn` explain the steps again.
 
 More: `skill/references/accuracy_rules.md` (A1-A18), `negotiation_codes.md`, `data_model.md`,
 `mode_matrix.md` (manager vs player). Installing: `INSTALL_FOR_AI.md`.

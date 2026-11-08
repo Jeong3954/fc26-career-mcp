@@ -191,11 +191,11 @@ def check_stdio(rep, python, data_dir):
         rep.fail("stdio server", "initialize failed: %s %s" % (cp.stdout[:200], cp.stderr[:200]))
         return
     tools = [t["name"] for t in by_id.get(2, {}).get("result", {}).get("tools", [])]
-    if len(tools) != 8:
+    if len(tools) != 9:
         rep.fail("stdio server", "tools/list returned %d tools: %s" % (len(tools), tools))
         return
     call = by_id.get(3, {}).get("result", {})
-    rep.ok("stdio server", "%s v%s, 8 tools, fc26_status answered (isError=%s)"
+    rep.ok("stdio server", "%s v%s, 9 tools, fc26_status answered (isError=%s)"
            % (by_id[1]["result"]["serverInfo"]["name"], by_id[1]["result"]["serverInfo"]["version"],
               call.get("isError")))
 

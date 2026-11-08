@@ -2,7 +2,8 @@
 
 Read-only. Opens the JSON files the Live Editor bridge writes (status.json, heartbeat.json,
 snapshot.json, world.json, event_payloads.jsonl) and the save extract (save_extract.json,
-refreshed through save/save_reader.py when the newest save changed). Never talks to the game.
+refreshed through save/save_reader.py when the newest save changed). Never talks to the game; the only file
+it writes in the data folder is the read_now request of fc26_refresh_world (the bridge consumes it).
 
 Every tool answer is a dict: {"_meta": {...}, ...data}. `_meta` carries source (live / save /
 live+save), scope (user_club / user_player / global / mixed), mode, live_game_date,
@@ -16,6 +17,7 @@ import os
 import stat
 import sys
 import time
+import uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRODUCT_ROOT = os.path.dirname(HERE)
@@ -25,9 +27,13 @@ if SAVE_DIR not in sys.path:
 
 PRODUCT = "FC26 Career MCP"
 SERVER_NAME = "fc26-career-mcp"
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 PROTOCOL_VERSIONS = ("2025-06-18", "2025-03-26", "2024-11-05")
 HEARTBEAT_ALIVE_SEC = 900
+READ_NOW_MIN_BRIDGE = (1, 0, 5)
+REFRESH_HOWTO = ("after loading a career, open and close a hub menu twice (the first event only settles), stay "
+                 "idle on the hub 15 s, then call fc26_refresh_world and open/close a hub menu once more: the bridge "
+                 "reads on the next quiet hub event")
 DEFAULT_LIMIT = 10
 MAX_LIMIT = 60
 
@@ -437,6 +443,7 @@ def tool_status(store, args):
     else:
         how.append("live values refresh on every game day and after each of your matches; to refresh now: advance "
                    "one day or return to the career hub")
+        how.append("standings / fixtures / results on demand (memory, one read): " + REFRESH_HOWTO)
     if not store.bridge_alive:
         how.append("heartbeat is old: the game or the bridge is not running; data is as of live_game_date")
     out = {
@@ -1121,6 +1128,76 @@ def _shift_date(iso, delta_days):
     return d.isoformat()
 
 
+def _version_tuple(v):
+    try:
+        return tuple(int(x) for x in str(v).split("."))
+    except ValueError:
+        return None
+
+
+def tool_refresh_world(store, args):
+    """Ask the bridge for ONE on-demand standings + fixtures read (bridge 1.0.5 read_now) and wait for it."""
+    req, inflight = store.path("read_now"), store.path("read_now_inflight")
+    if args.get("cancel"):
+        had = os.path.exists(req)
+        if had:
+            os.remove(req)
+        return {"_meta": meta(store, "live", "global"), "cancelled": had}
+    bridge = store.heartbeat.get("bridge") or store.status.get("bridge") or store.snapshot.get("bridge")
+    vt = _version_tuple(bridge)
+    if vt is None or vt < READ_NOW_MIN_BRIDGE:
+        raise ToolError("bridge_without_read_now", "the running bridge (%s) has no on-demand read; install bridge "
+                        "1.0.5+ (python installer/install.py) and restart FC 26" % bridge, bridge=bridge)
+    if os.path.exists(inflight):
+        raise ToolError("read_now_inflight", "a previous read never finished (the game probably closed or crashed "
+                        "during it); check the game, then delete %s to allow again" % inflight)
+    if os.path.exists(store.path("disable_read_now")):
+        raise ToolError("read_now_disabled", "the file disable_read_now in the data folder turns this off")
+    wait = max(1, min(int(args.get("wait_seconds") or 60), 600))
+    rid = uuid.uuid4().hex[:12]
+    with open(req + ".tmp", "w", encoding="utf-8") as f:
+        f.write("%s %d\n" % (rid, int(time.time())))
+    os.replace(req + ".tmp", req)
+    out = {"request_id": rid, "how_to": REFRESH_HOWTO}
+    end = time.time() + wait
+    result = None
+    while True:
+        try:
+            with open(store.path("read_now_result.json"), encoding="utf-8") as f:
+                r = json.load(f)
+            if isinstance(r, dict) and r.get("id") == rid:
+                result = r
+                break
+        except Exception:
+            pass
+        if time.time() >= end:
+            break
+        time.sleep(0.5)
+    if result is None:
+        if os.path.exists(req) and not args.get("keep_pending"):
+            os.remove(req)
+            out["status"] = "withdrawn"
+        elif os.path.exists(req):
+            out["status"] = "pending"
+        else:
+            out["status"] = "running_or_lost"
+        hb = Store(data_dir=store.data_dir).heartbeat
+        out["bridge_waiting_for"] = hb.get("reason")
+        out["hint"] = ("no answer in %ds. The bridge reads only on a quiet hub event: %s. keep_pending=true leaves "
+                       "the request for the next hub event (expires after 15 min)" % (wait, REFRESH_HOWTO))
+    else:
+        out["status"] = "done" if result.get("ok") else "failed"
+        out["result"] = result
+        if result.get("ok"):
+            out["next"] = "fresh world.json + snapshot: use fc26_competitions / fc26_my_career"
+        else:
+            out["hint"] = ("the read failed or was refused; a failed read blocks read_now until the game restarts. "
+                           "Data from the last game day stays available")
+    fresh = Store(data_dir=store.data_dir, saves_dir=store.saves_dir, save_refresh=False)
+    out["_meta"] = meta(fresh, "live", "global")
+    return out
+
+
 # ----------------------------------------------------------------------------------------------
 # Tool registry (schemas are the single source for MCP, REST/OpenAPI and the CLI)
 # ----------------------------------------------------------------------------------------------
@@ -1210,6 +1287,19 @@ TOOLS = [
                                     "include_undecoded": BOOL, "limit": INT},
                      "additionalProperties": False},
      "run": tool_global_events},
+    {"name": "fc26_refresh_world",
+     "description": "Ask the bridge (1.0.5+) for ONE live read of standings + fixtures/results for every "
+                    "competition right now (updates world.json and the snapshot's last_results / next_fixtures / "
+                    "league_table; transfers are not read). Works with memory reads off; the bridge does it only "
+                    "on a quiet career-hub event (>=15 s after any day / match / sim / save / load / exit event, "
+                    "not in a match). How: " + REFRESH_HOWTO + ". Waits wait_seconds (default 60, max 600); "
+                    "keep_pending=true leaves the request for a later hub event (expires after 15 min); "
+                    "cancel=true withdraws it. A failed read aborts and blocks this until the game restarts. "
+                    "Writes only a request file in the data folder; never changes the game. " + RULES,
+     "inputSchema": {"type": "object",
+                     "properties": {"wait_seconds": INT, "keep_pending": BOOL, "cancel": BOOL},
+                     "additionalProperties": False},
+     "run": tool_refresh_world},
 ]
 BY_NAME = {t["name"]: t for t in TOOLS}
 
