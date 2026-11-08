@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.4 - lifecycle safety and lighter reads
+
+- Block save/exit/new-career flows until a new settled hub event; defer the hub readiness call, reject reentrant callbacks, and remove the manual memory-gate bypass. Memory remains opt-in.
+- Reset career-specific names/events/world scheduling; attribute payloads only by decoded identity fields and bound sampling before reading. Native payload failures stop the memory tick.
+- Reuse dates and scalar standings within a callback; omit the intermediate bootstrap snapshot write. Heartbeats run at most every 5 seconds on events, including file-only activity reports while waiting.
+- Check file write/close/rename failures and preserve world retries. Expose cached memory state in MCP metadata and warnings.
+- Reuse file metadata and name indexes within each server request, without a stale cross-request cache.
+- Add executable Lua lifecycle regression tests.
+
 ## 1.0.3 - safe default (bridge)
 
 - Memory reads are now **off by default**: some games still crashed during multi-day sims while the bridge read

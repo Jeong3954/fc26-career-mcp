@@ -13,6 +13,7 @@ Python 3.9+, standard library only.
 """
 import json
 import os
+import stat
 import sys
 import time
 
@@ -24,7 +25,7 @@ if SAVE_DIR not in sys.path:
 
 PRODUCT = "FC26 Career MCP"
 SERVER_NAME = "fc26-career-mcp"
-VERSION = "1.0.3"
+VERSION = "1.0.4"
 PROTOCOL_VERSIONS = ("2025-06-18", "2025-03-26", "2024-11-05")
 HEARTBEAT_ALIVE_SEC = 900
 DEFAULT_LIMIT = 10
@@ -132,6 +133,9 @@ class Store:
         self.now = now if now is not None else time.time()
         self.save_refresh = save_refresh
         self._cache = {}
+        self._stats = {}
+        self._name_maps = None
+        self._name_maps_save = None
         self._world = None
         self._save = None
         self._save_status = None
@@ -140,15 +144,21 @@ class Store:
     def path(self, name):
         return os.path.join(self.data_dir, name)
 
+    def stat(self, name):
+        if name not in self._stats:
+            try:
+                self._stats[name] = os.stat(self.path(name))
+            except OSError:
+                self._stats[name] = None
+        return self._stats[name]
+
     def exists(self, name):
-        return os.path.isfile(self.path(name))
+        info = self.stat(name)
+        return info is not None and stat.S_ISREG(info.st_mode)
 
     def age(self, name):
-        p = self.path(name)
-        try:
-            return int(self.now - os.path.getmtime(p))
-        except OSError:
-            return None
+        info = self.stat(name)
+        return int(self.now - info.st_mtime) if info is not None else None
 
     def load(self, name):
         if name in self._cache:
@@ -243,6 +253,7 @@ class Store:
             except Exception as e:  # the extract on disk is still usable
                 status = {"ok": False, "error": "reader_failed", "detail": "%s: %s" % (type(e).__name__, e)}
             self._cache.pop("save_extract.json", None)
+            self._stats.pop("save_extract.json", None)
         self._save = self.load("save_extract.json") or {}
         self._save_status = status
         return self._save, status
@@ -250,6 +261,8 @@ class Store:
     # -- names --
     def name_maps(self):
         """player id -> name and team id -> name from the live files (+ save maps as fallback)."""
+        if self._name_maps is not None and self._name_maps_save is self._save:
+            return self._name_maps
         players, teams = {}, {}
         snap = self.snapshot
         for p in self.squad:
@@ -297,7 +310,9 @@ class Store:
                 pass
         players.pop(None, None)
         teams.pop(None, None)
-        return players, teams
+        self._name_maps = (players, teams)
+        self._name_maps_save = self._save
+        return self._name_maps
 
 
 # ----------------------------------------------------------------------------------------------
@@ -360,6 +375,7 @@ def meta(store, source="live", scope="user_club", warnings=None, save_as_of=None
         "heartbeat_age_sec": hb_age,
         "bridge_alive": store.bridge_alive,
         "compat": store.compat,
+        "memory": snap.get("memory"),
         "warnings": list(warnings or []),
     }
     if save_as_of:
@@ -370,6 +386,12 @@ def meta(store, source="live", scope="user_club", warnings=None, save_as_of=None
         if not store.bridge_alive:
             m["warnings"].append("bridge not beating (heartbeat older than %d s or absent): live values are as of "
                                  "live_game_date; the game may be further on" % HEARTBEAT_ALIVE_SEC)
+        memory = snap.get("memory") or {}
+        if snap.get("memory_reads") is False or (memory and memory.get("state") != "fresh"):
+            m["warnings"].append("memory data unavailable or retained from an earlier read: " +
+                                 str(memory.get("reason") or "memory reads disabled"))
+        if store.heartbeat.get("why"):
+            m["warnings"].append("bridge waiting: " + str(store.heartbeat["why"]))
         if snap.get("date_error"):
             m["warnings"].append("game date read failed: %s" % snap["date_error"])
     if store.compat == "partial":
@@ -424,6 +446,7 @@ def tool_status(store, args):
         "le_version": snap.get("le_version") or st.get("le_version"),
         "compat": store.compat, "compat_reason": snap.get("compat_reason") or st.get("reason"),
         "memory_reads": snap.get("memory_reads", st.get("memory_reads")),
+        "memory": snap.get("memory"),
         "supported_le_versions": st.get("supported_le_versions"),
         "mode": store.mode,
         "career_ready": hb.get("career_ready"), "heartbeat_reason": hb.get("reason"), "heartbeat_why": hb.get("why"),

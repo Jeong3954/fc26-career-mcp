@@ -42,10 +42,10 @@ class StaticGuardTest(unittest.TestCase):
         self.assertIn('io.open(ROOT .. "\\\\enable_memory", "r")', s)
         self.assertIn("OFFS ~= nil and not FC26CD.mem_disabled and mem_opt_in()", s)
         self.assertIn('if not mem_opt_in() then return "off_by_default" end', s)
-        self.assertIn('MEM.why ~= "off_by_default"', s)
+        self.assertNotIn("force_open", s)  # manual runs cannot bypass a closed gate
         self.assertNotIn('mem_read, "ReadBytes", a, n, n, true', s)
         h = s[s.index("function FC26CD_OnEvent"):]
-        self.assertLess(h.index("or quiet_gate() then return end"), h.index("local okcm, incm = pcall(IsInCM)\n        if not okcm"))
+        self.assertLess(h.index("or quiet_gate() then"), h.index("local okcm, incm = pcall(IsInCM)\n        if not okcm"))
         self.assertNotIn('elseif ename == "DAY_PASSED" then', h)
 
     def test_autorun_in_sync(self):
@@ -136,8 +136,8 @@ class MemBlockTest(unittest.TestCase):
     def test_payload_read_error_keeps_mem_failed(self):
         self.lua.execute("calls = {}; MEMT.failed = nil; bytes_fail = true")
         self.assertEqual(self.run_lua("return payload_bytes_t(0x20000000, 4)"), "true|nil")
-        self.assertIsNone(self.lua.eval("MEMT.failed"))
-        self.lua.execute("bytes_fail = false")
+        self.assertIn("bad read", self.lua.eval("MEMT.failed"))
+        self.lua.execute("bytes_fail = false; MEMT.failed = nil")
         self.assertEqual(self.run_lua("return #payload_bytes_t(0x20000000, 4)"), "true|4")
 
 
